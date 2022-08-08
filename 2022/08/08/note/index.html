@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>数模の路---线性规划 | 一个网站</title><meta name="author" content="Jc Zhang"><meta name="copyright" content="Jc Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="线性规划 我想计算一个线性方程组方程组的解 $$ \begin{equation} % \begin{equation*} 加’&#39;去掉公式编号 \left{ \begin{aligned}     %请使用’aligned’或’align’ 10x-2y-2z &amp;&#x3D; 72 \     %加’&amp;‘指定对齐位置 -x+10y-2z &amp;&#x3D; 83 \ -x-y+5z &amp;&#x3D;">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>数模の路---线性规划 | 一个网站</title><meta name="author" content="Jc Zhang"><meta name="copyright" content="Jc Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="线性规划我想计算一个线性方程组方程组的解  \begin{equation} % \begin{equation*} 加&#39;*&#39;去掉公式编号 \left\{ \begin{aligned}     %请使用&#39;aligned&#39;或&#39;align*&#39; 10x-2y-2z &amp;&#x3D; 72 \\     %加&#39;&amp;&#39;指定对齐位置 -x+10y-2z &amp;&#x3D; 83 \\ -x-y+5z &amp;&#x3D; 42 \\ \end{ali">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数模の路---线性规划">
 <meta property="og:url" content="http://example.com/2022/08/08/note/index.html">
 <meta property="og:site_name" content="一个网站">
-<meta property="og:description" content="线性规划 我想计算一个线性方程组方程组的解 $$ \begin{equation} % \begin{equation*} 加’&#39;去掉公式编号 \left{ \begin{aligned}     %请使用’aligned’或’align’ 10x-2y-2z &amp;&#x3D; 72 \     %加’&amp;‘指定对齐位置 -x+10y-2z &amp;&#x3D; 83 \ -x-y+5z &amp;&#x3D;">
+<meta property="og:description" content="线性规划我想计算一个线性方程组方程组的解  \begin{equation} % \begin{equation*} 加&#39;*&#39;去掉公式编号 \left\{ \begin{aligned}     %请使用&#39;aligned&#39;或&#39;align*&#39; 10x-2y-2z &amp;&#x3D; 72 \\     %加&#39;&amp;&#39;指定对齐位置 -x+10y-2z &amp;&#x3D; 83 \\ -x-y+5z &amp;&#x3D; 42 \\ \end{ali">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/default_cover.jpg">
 <meta property="article:published_time" content="2022-08-08T14:23:07.056Z">
-<meta property="article:modified_time" content="2022-08-08T14:39:25.103Z">
+<meta property="article:modified_time" content="2022-08-08T15:27:42.841Z">
 <meta property="article:author" content="Jc Zhang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/img/default_cover.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/08/08/note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -52,7 +52,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-08-08 22:39:25'
+  postUpdate: '2022-08-08 23:27:42'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -141,108 +141,89 @@
       }
     }
     detectApple()
-    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default_cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个网站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数模の路---线性规划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-08T14:23:07.056Z" title="发表于 2022-08-08 22:23:07">2022-08-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-08T14:39:25.103Z" title="更新于 2022-08-08 22:39:25">2022-08-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">685</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数模の路---线性规划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>线性规划</h1>
-<p>我想计算一个线性方程组方程组的解<br>
-$$<br>
-\begin{equation}<br>
-% \begin{equation*} 加’<em>'去掉公式编号<br>
-\left{<br>
-\begin{aligned}     %请使用’aligned’或’align</em>’<br>
-10x-2y-2z &amp;= 72 \     %加’&amp;‘指定对齐位置<br>
--x+10y-2z &amp;= 83 \<br>
--x-y+5z &amp;= 42 \<br>
-\end{aligned}<br>
-\right.<br>
-\end{equation}<br>
-% \end{equation*}   加’*'去掉公式编号</p>
-<p>% 注意：在 markdown 环境下，某些特殊字符，如’‘, ‘<em>‘等，会首先被 markdown 语法转义，然后再被 Latex 转义。<br>
-% 因此有时候 ‘{‘需要写作’\{’，’</em>‘需要写作’*’，’\‘需要写作’\\'等，视不同的解释环境而定<br>
-$$<br>
-用python算应该怎么办呢？</p>
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default_cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个网站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数模の路---线性规划</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-08T14:23:07.056Z" title="发表于 2022-08-08 22:23:07">2022-08-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-08T15:27:42.841Z" title="更新于 2022-08-08 23:27:42">2022-08-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">664</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数模の路---线性规划"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h1><p>我想计算一个线性方程组方程组的解</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+% \begin{equation*} 加'*'去掉公式编号
+\left\{
+\begin{aligned}     %请使用'aligned'或'align*'
+10x-2y-2z &= 72 \\     %加'&'指定对齐位置
+-x+10y-2z &= 83 \\
+-x-y+5z &= 42 \\
+\end{aligned}
+\right.
+\end{equation}
+% \end{equation*}   加'*'去掉公式编号
+
+% 注意：在 markdown 环境下，某些特殊字符，如'\', '*'等，会首先被 markdown 语法转义，然后再被 Latex 转义。
+% 因此有时候 '\{'需要写作'\\{'，'*'需要写作'\*'，'\\'需要写作'\\\\'等，视不同的解释环境而定</script><p>用python算应该怎么办呢？</p>
 <p>发现有一个叫<code>numpy</code>的库</p>
 <p>它有啥我们先不管,我们先关注于问题本身</p>
 <p>它是一个$AX=b$形式的向量,我可以把它们写成向量的形式啊</p>
-<p>长这样：<br>
-$$<br>
-\left[<br>
-\begin{matrix}<br>
-10 &amp; -2 &amp; -2 \<br>
--1 &amp; 10 &amp; -2 \<br>
--1 &amp; -1 &amp; 5 \<br>
-\end{matrix}<br>
-\right]</p>
-<h1>\left[<br>
-\begin{matrix}<br>
-x\ y\ z<br>
-\end{matrix}<br>
-\right]</h1>
-<p>\left[<br>
-\begin{matrix}<br>
-72\<br>
-83\<br>
-42\<br>
-\end{matrix}<br>
-\right]<br>
-$$</p>
-<p>我需要矩阵乘法和矩阵求逆的方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">A = np.array([[<span class="number">10</span>, -<span class="number">2</span>, -<span class="number">2</span>],[-<span class="number">1</span>, <span class="number">10</span>, -<span class="number">2</span>],[<span class="number">1</span>, -<span class="number">1</span>, <span class="number">5</span>]])</span><br><span class="line">b = np.array([<span class="number">72</span>, <span class="number">83</span>, <span class="number">42</span>])</span><br><span class="line">X = np.linalg.inv(A).dot(b)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(X)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>我还发现可以用一个方法来解方程$AX=b$</p>
+<p>长这样：</p>
+<script type="math/tex; mode=display">
+\left[
+\begin{matrix}
+10 & -2 & -2 \\
+-1 & 10 & -2 \\
+-1 & -1 & 5 \\
+\end{matrix}
+\right]
+
+ \left[
+\begin{matrix}
+x\\ y\\ z
+\end{matrix}
+\right]
+=
+\left[
+\begin{matrix}
+72\\
+83\\
+42\\
+\end{matrix}
+\right]</script><p>我需要矩阵乘法和矩阵求逆的方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">A = np.array([[<span class="number">10</span>, -<span class="number">2</span>, -<span class="number">2</span>],[-<span class="number">1</span>, <span class="number">10</span>, -<span class="number">2</span>],[<span class="number">1</span>, -<span class="number">1</span>, <span class="number">5</span>]])</span><br><span class="line">b = np.array([<span class="number">72</span>, <span class="number">83</span>, <span class="number">42</span>])</span><br><span class="line">X = np.linalg.inv(A).dot(b)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(X)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>我还发现可以用一个方法来解方程<script type="math/tex">AX=b</script></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X = np.linalg.solve(A,b)</span><br></pre></td></tr></table></figure>
-<p>它是求解满秩的方程组的函数<br>
-第一个是系数矩阵，第二个是常数矩阵</p>
-<p>我又了解到一个叫<code>sympy</code>的库,它的计算精度似乎更高</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> symbols, Eq, solve</span><br><span class="line"></span><br><span class="line">x,y,z = symbols(<span class="string">&quot;x y z&quot;</span>)  <span class="comment"># 符号化变量</span></span><br><span class="line">equ =[Eq(<span class="number">10</span>*x-<span class="number">2</span>*y-<span class="number">2</span>*z, <span class="number">72</span>),  <span class="comment"># 等式函数</span></span><br><span class="line">    Eq(-x+<span class="number">10</span>*y-<span class="number">2</span>*z, <span class="number">83</span>),</span><br><span class="line">    Eq(-x-y+<span class="number">5</span>*z, <span class="number">72</span>)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solve(equ, [x,y,z]))  <span class="comment">#</span></span><br><span class="line">第一个参数为要解的方程，要求右端等于<span class="number">0</span>，第二个参数为要解的未知数</span><br></pre></td></tr></table></figure>
-<p>可是遇到很多不同类型约束条件应该怎么办呢</p>
-<h2 id="线性规划的标准形式">线性规划的标准形式</h2>
-<p>$min \quad c^Tx$</p>
-<p>$$<br>
-\begin{equation}<br>
-\left{<br>
-\begin{aligned}<br>
-Ax &amp;\leq b \<br>
-Aeq·x&amp;=Beq \<br>
-Ib \leq &amp;x \leq ub<br>
-\end{aligned}<br>
-\right.<br>
-\end{equation}<br>
-$$</p>
-<p>比如下面这个</p>
+<p>它是求解满秩的方程组的函数<br>第一个是系数矩阵，第二个是常数矩阵</p>
+<p>我又了解到一个叫<code>sympy</code>的库,它的计算精度似乎更高<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> symbols, Eq, solve</span><br><span class="line"></span><br><span class="line">x,y,z = symbols(<span class="string">&quot;x y z&quot;</span>)  <span class="comment"># 符号化变量</span></span><br><span class="line">equ =[Eq(<span class="number">10</span>*x-<span class="number">2</span>*y-<span class="number">2</span>*z, <span class="number">72</span>),  <span class="comment"># 等式函数</span></span><br><span class="line">    Eq(-x+<span class="number">10</span>*y-<span class="number">2</span>*z, <span class="number">83</span>),</span><br><span class="line">    Eq(-x-y+<span class="number">5</span>*z, <span class="number">72</span>)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solve(equ, [x,y,z]))  <span class="comment">#</span></span><br><span class="line">第一个参数为要解的方程，要求右端等于<span class="number">0</span>，第二个参数为要解的未知数</span><br></pre></td></tr></table></figure><br>可是遇到很多不同类型约束条件应该怎么办呢</p>
+<h2 id="线性规划的标准形式"><a href="#线性规划的标准形式" class="headerlink" title="线性规划的标准形式"></a>线性规划的标准形式</h2><p>$min \quad c^Tx$</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+\left\{
+    \begin{aligned} 
+    Ax &\leq b \\
+    Aeq·x&=Beq \\
+    Ib \leq &x \leq ub
+    \end{aligned} 
+\right.
+\end{equation}</script><p>比如下面这个 </p>
 <p>$max\quad z=2x_1+3x_2-5x_3$</p>
-<p>$$<br>
-\begin{equation}<br>
-\left{<br>
-\begin{aligned}<br>
-x_1+x_2+x_3&amp;=7 \<br>
-2x_1-5x_2+x_3&amp;\geq10 \<br>
-x_1+3x_2+x_3&amp;\leq12 \<br>
-x_1,x_2,x_3&amp;\geq 3<br>
-\end{aligned}<br>
-\right.<br>
-\end{equation}<br>
-$$</p>
-<p><strong>求一个变量的最大值我们只要求出这个变量的相反数的最小值就好了</strong></p>
+<script type="math/tex; mode=display">
+\begin{equation}
+\left\{
+    \begin{aligned} 
+    x_1+x_2+x_3&=7 \\
+    2x_1-5x_2+x_3&\geq10 \\
+    x_1+3x_2+x_3&\leq12 \\
+    x_1,x_2,x_3&\geq 3
+    \end{aligned} 
+\right.
+\end{equation}</script><p><strong>求一个变量的最大值我们只要求出这个变量的相反数的最小值就好了</strong></p>
 <p>根据规范式转换为</p>
 <p>$min\quad -z=-2x_1-3x_2+5x_3$</p>
-<p>$$<br>
-\begin{equation}<br>
-\left{<br>
-\begin{aligned}<br>
-x_1+x_2+x_3&amp;=7 \<br>
--2x_1+5x_2-x_3&amp;\leq-10 \<br>
-x_1+3x_2+x_3&amp;\leq12 \<br>
--x_1,-x_2,-x_3&amp;\leq-3<br>
-\end{aligned}<br>
-\right.<br>
-\end{equation}<br>
-$$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pickletools <span class="keyword">import</span> optimize</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> linprog</span><br><span class="line"></span><br><span class="line">c = np.array([-<span class="number">2</span>,-<span class="number">3</span>,<span class="number">5</span>])</span><br><span class="line">Aeq = np.array([[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]])</span><br><span class="line">beq = np.array([<span class="number">7</span>])</span><br><span class="line">A = np.array([[-<span class="number">2</span>,<span class="number">5</span>,-<span class="number">1</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>]])</span><br><span class="line">b = np.array([-<span class="number">10</span>,<span class="number">12</span>])</span><br><span class="line">x1,x2,x3 = (<span class="number">0</span>,<span class="literal">None</span>),(<span class="number">0</span>,<span class="literal">None</span>),(<span class="number">0</span>,<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">res = linprog(c,A,b,Aeq,beq,bounds=[x1,x2,x3])</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
-<p>关于<code>scipy.optimize.linprog</code><br>
-<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45288557/article/details/109139303">详细信息</a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Jc Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/08/08/note/">http://example.com/2022/08/08/note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">一个网站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/default_cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/20/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"><img class="next-cover" src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo x Github的常用指令</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jc Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/faithererer"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">线性规划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">\left[
-\begin{matrix}
-x\ y\ z
-\end{matrix}
-\right]</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">线性规划的标准形式</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/default_cover.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Jc Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+<script type="math/tex; mode=display">
+\begin{equation}
+\left\{
+    \begin{aligned} 
+    x_1+x_2+x_3&=7 \\
+    -2x_1+5x_2-x_3&\leq-10 \\
+    x_1+3x_2+x_3&\leq12 \\
+    -x_1,-x_2,-x_3&\leq-3
+    \end{aligned} 
+\right.
+\end{equation}</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pickletools <span class="keyword">import</span> optimize</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> linprog</span><br><span class="line"></span><br><span class="line">c = np.array([-<span class="number">2</span>,-<span class="number">3</span>,<span class="number">5</span>])</span><br><span class="line">Aeq = np.array([[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]])</span><br><span class="line">beq = np.array([<span class="number">7</span>])</span><br><span class="line">A = np.array([[-<span class="number">2</span>,<span class="number">5</span>,-<span class="number">1</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>]])</span><br><span class="line">b = np.array([-<span class="number">10</span>,<span class="number">12</span>])</span><br><span class="line">x1,x2,x3 = (<span class="number">0</span>,<span class="literal">None</span>),(<span class="number">0</span>,<span class="literal">None</span>),(<span class="number">0</span>,<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">res = linprog(c,A,b,Aeq,beq,bounds=[x1,x2,x3])</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+<p>关于<code>scipy.optimize.linprog</code><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45288557/article/details/109139303">详细信息</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Jc Zhang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/08/08/note/">http://example.com/2022/08/08/note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">一个网站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/default_cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/20/%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"><img class="next-cover" src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo x Github的常用指令</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jc Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/faithererer"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92"><span class="toc-number">1.</span> <span class="toc-text">线性规划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">线性规划的标准形式</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/default_cover.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Jc Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -253,11 +234,52 @@ x\ y\ z
 
   }
 }
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
-  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
-    btf.wrap(item, 'div', { class: 'katex-wrap'})
-  })
-})()</script><script>function addGitalkSource () {
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function addGitalkSource () {
   const ele = document.createElement('link')
   ele.rel = 'stylesheet'
   ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
