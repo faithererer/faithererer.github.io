@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>给Git添加代理</title>
+      <link href="/2023/06/04/git%E4%BB%A3%E7%90%86/"/>
+      <url>/2023/06/04/git%E4%BB%A3%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">git config --global 协议.proxy 协议://ip地址:端口号</span></span><br><span class="line">git config --global http.proxy http://127.0.0.1:7890</span><br><span class="line">git config --global https.proxy http://127.0.0.1:7890</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">取消代理</span></span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">只对github.com</span></span><br><span class="line">git config --global http.https://github.com.proxy http://127.0.0.1:7890</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:7891</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取消代理</span></span><br><span class="line">git config --global --unset http.https://github.com.proxy</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>给markdown文档添加参考文献引用</title>
       <link href="/2023/04/06/%E7%BB%99markdown%E6%96%87%E6%A1%A3%E6%B7%BB%E5%8A%A0%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%BC%95%E7%94%A8/"/>
       <url>/2023/04/06/%E7%BB%99markdown%E6%96%87%E6%A1%A3%E6%B7%BB%E5%8A%A0%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%BC%95%E7%94%A8/</url>
