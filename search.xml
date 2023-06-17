@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>MSP430单片机课设</title>
+      <link href="/2023/06/18/%E5%8D%95%E7%89%87%E6%9C%BA/DBSend/"/>
+      <url>/2023/06/18/%E5%8D%95%E7%89%87%E6%9C%BA/DBSend/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 单片机 </tag>
+            
+            <tag> MSP430 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OS_课设</title>
+      <link href="/2023/06/18/OS/OS%E8%AF%BE%E8%AE%BE/"/>
+      <url>/2023/06/18/OS/OS%E8%AF%BE%E8%AE%BE/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> OS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库复习</title>
       <link href="/2023/06/04/%E6%95%B0%E6%8D%AE%E5%BA%93/DBSend/"/>
       <url>/2023/06/04/%E6%95%B0%E6%8D%AE%E5%BA%93/DBSend/</url>
@@ -74,8 +120,8 @@
     
     <entry>
       <title>OS_PV操作</title>
-      <link href="/2023/04/06/OS_PV%E6%93%8D%E4%BD%9C/"/>
-      <url>/2023/04/06/OS_PV%E6%93%8D%E4%BD%9C/</url>
+      <link href="/2023/04/06/OS/OS_PV%E6%93%8D%E4%BD%9C/"/>
+      <url>/2023/04/06/OS/OS_PV%E6%93%8D%E4%BD%9C/</url>
       
         <content type="html"><![CDATA[<h1 id="什么是PV操作"><a href="#什么是PV操作" class="headerlink" title="什么是PV操作"></a>什么是PV操作</h1><p>PV操作就是荷兰语<strong>P</strong>asseren（通过），<strong>V</strong>rijgeven（释放）的简称。对应的就是wait等待，signal释放操作。</p><p>P操作就是，将进程从运行态转化为阻塞态，直到它被另一个进程唤醒</p><p>V操作就是，将一个处于阻塞态的进程唤醒。</p><h1 id="P操作"><a href="#P操作" class="headerlink" title="P操作"></a>P操作</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s=s<span class="number">-1</span></span><br><span class="line"><span class="keyword">if</span>(s&lt;<span class="number">0</span>)&#123;</span><br><span class="line">P();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="V操作"><a href="#V操作" class="headerlink" title="V操作"></a>V操作</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s=s+<span class="number">1</span></span><br><span class="line"><span class="keyword">if</span>(s&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">V();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="抢占式优先级调度算法和非抢占式优先级调度算法"><a href="#抢占式优先级调度算法和非抢占式优先级调度算法" class="headerlink" title="抢占式优先级调度算法和非抢占式优先级调度算法"></a>抢占式优先级调度算法和非抢占式优先级调度算法</h1><p>抢占式优先级调度算法可以使当前正在执行的进程被更高优先级的进程所打断，并立即切换到新的进程。这种调度算法通常会导致频繁的上下文切换，但是可以保证高优先级进程的响应时间，从而提高系统的实时性能。</p><p>而非抢占式优先级调度算法则不允许其他进程打断当前进程的执行，只有在当前进程自愿放弃CPU控制权时才会进行进程切换。这种调度算法相对稳定，但是可能会导致低优先级进程长时间等待，影响系统的响应速度和实时性能。</p><p>即抢占式优先级调度算法进行V操作时，唤醒的进程为优先级最高的进程，而非抢占式优先级调度算法的V操作则无作为，继续执行当前进程，完成后再执行其他进程。</p>]]></content>
       
