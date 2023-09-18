@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>众数问题</title>
+      <link href="/2023/09/17/%E7%AE%97%E6%B3%95/%E5%88%86%E6%B2%BB/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/09/17/%E7%AE%97%E6%B3%95/%E5%88%86%E6%B2%BB/%E4%BC%97%E6%95%B0%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>Description<br>给定含有n个元素的多重集合S，每个元素在S中出现的次数称为该元素的重数。多重集S中重数最大的元素称为众数。例如，$S={1，2，2，2，3，5}$。多重集S的众数是2，其重数为3。对于给定的由n 个自然数组成的多重集S，计算S的众数及其重数。如果出现多个众数，请输出最小的那个。</p><p>Input<br>输入数据的第1行是多重集S中元素个数n（n&lt;1300000）；接下来的n行中，每行有一个最多含有5位数字的自然数，。</p><p>Output<br>输出数据的第1行给出众数，第2行是重数。</p><p>Samples<br>Sample #1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 分治 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编译原理OJ</title>
       <link href="/2023/09/05/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90%E7%A8%8B%E5%BA%8F/"/>
       <url>/2023/09/05/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90%E7%A8%8B%E5%BA%8F/</url>
