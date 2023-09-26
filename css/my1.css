@@ -16,3 +16,8 @@
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 }
+
+/** 鼠标*/
+
+html{CURSOR: url(./mouse/body.cur),auto;}
+a:hover{CURSOR: url(./mouse/a.cur),auto;}
