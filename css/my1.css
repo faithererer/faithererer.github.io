@@ -19,6 +19,7 @@
 
 /** 鼠标*/
 
-html{CURSOR: url(./mouse/body.cur),auto;}
-a:hover{CURSOR: url(./mouse/a.cur),auto;}
-i:hover{CURSOR: url(./mouse/a.cur),auto;}
+html{CURSOR: url(./mouse/body.cur),auto !important;}
+a:hover{CURSOR: url(./mouse/a.cur),auto !important;;}
+i:hover{CURSOR: url(./mouse/a.cur),auto !important;;}
+.menus_item:hover{CURSOR: url(./mouse/a.cur),auto !important;;}
