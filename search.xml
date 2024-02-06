@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>leetcode_206. 反转链表</title>
+      <link href="/2024/02/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+      <url>/2024/02/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* dummy=<span class="keyword">new</span> <span class="built_in">ListNode</span>();</span><br><span class="line">        ListNode* p=head;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">            ListNode* t=p;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">            t-&gt;next=dummy-&gt;next;</span><br><span class="line">            dummy-&gt;next=t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+          <category> 链表 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+            <tag> 链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>感想</title>
       <link href="/2024/01/22/%E5%90%90%E6%A7%BD/%E6%84%8F%E4%B9%89/"/>
       <url>/2024/01/22/%E5%90%90%E6%A7%BD/%E6%84%8F%E4%B9%89/</url>
