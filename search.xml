@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>Leetcode_27. 移除元素</title>
+      <title>Leetcode_96. 不同的二叉搜索树</title>
       <link href="/2024/04/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_96.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
       <url>/2024/04/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_96.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</url>
       
@@ -29,6 +29,8 @@
             <tag> 二叉搜索树 </tag>
             
             <tag> 二叉树 </tag>
+            
+            <tag> dp </tag>
             
         </tags>
       
