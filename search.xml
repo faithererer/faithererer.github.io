@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>为什么String是线程安全的?</title>
+      <link href="/2024/04/09/java%E9%9D%A2%E8%AF%95/String%E6%9D%82%E8%B0%88/"/>
+      <url>/2024/04/09/java%E9%9D%A2%E8%AF%95/String%E6%9D%82%E8%B0%88/</url>
+      
+        <content type="html"><![CDATA[<p>人们都说String是线程安全的，为什么呢？<br>今日探究一下。</p><h1 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h1><p><strong>定义</strong>：<br>维基百科中，线程安全如下定义</p><blockquote><p>线程安全是程序设计中的术语，指某个函数、函数库在多线程环境中被调用时，能够正确地处理多个线程之间的<strong>公用变量</strong>，使程序功能正确完成。</p></blockquote><p>线程安全就是多个线程访问同一资源，线程间依照某种方式访问资源时，访问的结果总是能获取到正确的结果，运行得到正确得结果。<br>线程安全的关键是正确的访问共享变量。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaSE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Leetcode_96. 不同的二叉搜索树</title>
       <link href="/2024/04/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_96.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
       <url>/2024/04/06/leetcode%E9%A2%98%E8%A7%A3/leetcode_96.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</url>
