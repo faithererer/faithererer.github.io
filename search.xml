@@ -4,6 +4,104 @@
   
     
     <entry>
+      <title>使用github+cloudflare+picgo搭建图床视频床文件床</title>
+      <link href="/2024/05/02/%E7%BB%8F%E9%AA%8C/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
+      <url>/2024/05/02/%E7%BB%8F%E9%AA%8C/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>Github是一个著名的代码托管网站，可以创建仓库存储代码，但是我们可以也上传图片，视频这些文件。<br>因为众所周知的原因国内Github访问很慢本身不具备图床条件，我们可以通过cloudflare来进行代理实现加速的效果。</p><h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><ul><li>单个仓库支持5GB的空间，不够可以再新建一个仓库，继续存，所以理论上是无限存储。</li><li>无限速直连</li><li>经测试单个文件大小最多支持115mb</li><li>单日请求数最多10w<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1></li><li>一个Github账号</li><li>一个cloudflare账号</li><li>PicGo<a href="[w](https://github.com/Molunerfinn/PicGo/releases/download/v2.3.1/PicGo-Setup-2.3.1.exe">点击下载</a>)</li><li>域名(可有可无)</li><li>梯子(可有可无，主要原因是Github访问有点慢)</li></ul><h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><p><a href="https://james-blog.top/posts/21.html">详细教程</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 实用技巧 </tag>
+            
+            <tag> 小工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>黑🐎点评</title>
+      <link href="/2024/05/02/java/%E9%BB%91%E9%A9%AC%E7%82%B9%E8%AF%84/"/>
+      <url>/2024/05/02/java/%E9%BB%91%E9%A9%AC%E7%82%B9%E8%AF%84/</url>
+      
+        <content type="html"><![CDATA[<h1 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h1><p><img src="%E9%BB%91%E9%A9%AC%E7%82%B9%E8%AF%84.assets/image-20240502173535759.png" alt="image-20240502173535759"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> redis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> redis </tag>
+            
+            <tag> 项目实战 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaSE</title>
+      <link href="/2024/05/01/java%E9%9D%A2%E8%AF%95/javase/"/>
+      <url>/2024/05/01/java%E9%9D%A2%E8%AF%95/javase/</url>
+      
+        <content type="html"><![CDATA[<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><p>反射是一种 Java 编程语言的特性，它允许在运行时检查类、获取类的信息（如字段、方法、构造函数等），并且可以在运行时动态地创建对象、调用方法和访问属性等。换句话说，反射使得程序能够在运行时检查和操作对象的类和实例。</p><p>Java 反射的核心是 <code>java.lang.reflect</code> 包，它提供了一组类和接口，用于在运行时检查和操作类的信息。主要的类和接口包括：</p><ul><li><code>Class</code> 类：表示类的运行时类型信息，它包含了类的字段、方法、构造函数等信息。</li><li><code>Field</code> 类：表示类的字段，可以用于获取和设置字段的值。</li><li><code>Method</code> 类：表示类的方法，可以用于调用类的方法。</li><li><code>Constructor</code> 类：表示类的构造函数，可以用于创建类的实例。</li></ul><p>通过这些类和接口，可以在运行时动态地获取和操作类的信息，例如：</p><ul><li>获取类的字段、方法、构造函数等信息。</li><li>动态地创建类的实例。</li><li>调用类的方法。</li><li>获取和设置类的字段的值。</li></ul><p>反射通常用于一些需要在编译时无法确定类的情况下，或者需要动态地加载类、调用方法的情况下。例如，当你编写一个通用的框架或库时，无法预先知道客户端会使用哪些类，这时可以使用反射来动态地加载类和调用方法。另外，一些 Java 框架和库（如 Spring、Hibernate）也大量使用了反射来实现各种功能。</p><hr><h5 id="编译时无法确定类，运行时才能确定，我无法理解，举个例子。"><a href="#编译时无法确定类，运行时才能确定，我无法理解，举个例子。" class="headerlink" title="编译时无法确定类，运行时才能确定，我无法理解，举个例子。"></a>编译时无法确定类，运行时才能确定，我无法理解，举个例子。</h5><p>理解起来可能需要考虑一些稍微复杂的情况。让我们通过一个简单的例子来说明：</p><p>假设你正在编写一个简单的插件系统，你希望能够在运行时加载不同的插件，并且调用这些插件提供的方法。但是，你在编写主程序时并不知道具体有哪些插件会被加载。</p><p>现在，让我们来看一下这个例子的实现：</p><ol><li><strong>主程序：</strong> 主程序是一个简单的 Java 应用程序，它负责加载插件并调用它们的方法。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">javaCopy codepublic class MainProgram &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 在运行时加载插件</span><br><span class="line">        Plugin plugin = loadPlugin(&quot;Plugin1&quot;);</span><br><span class="line"></span><br><span class="line">        // 调用插件的方法</span><br><span class="line">        plugin.doSomething();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Plugin loadPlugin(String pluginName) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            // 根据插件名加载相应的类</span><br><span class="line">            Class&lt;?&gt; pluginClass = Class.forName(pluginName);</span><br><span class="line">            </span><br><span class="line">            // 使用反射创建插件类的实例</span><br><span class="line">            Plugin plugin = (Plugin) pluginClass.newInstance();</span><br><span class="line"></span><br><span class="line">            return plugin;</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol><li><strong>插件接口和实现：</strong> 插件接口定义了插件的行为，而插件实现则提供了具体的功能。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">javaCopy codepublic interface Plugin &#123;</span><br><span class="line">    void doSomething();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Plugin1 implements Plugin &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void doSomething() &#123;</span><br><span class="line">        System.out.println(&quot;Plugin1 is doing something.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在这个例子中，主程序在编译时并不知道具体有哪些插件会被加载，因为插件的类名是在运行时确定的。主程序使用反射动态加载了指定名称的插件类，并调用了插件提供的方法。这就是编译时无法确定类，但在运行时才能确定的情况。</p><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h5 id="在编译后进行擦除，那为什么运行时可以正常使用，Object不能使用其衍生类的所有功能吧"><a href="#在编译后进行擦除，那为什么运行时可以正常使用，Object不能使用其衍生类的所有功能吧" class="headerlink" title="在编译后进行擦除，那为什么运行时可以正常使用，Object不能使用其衍生类的所有功能吧"></a>在编译后进行擦除，那为什么运行时可以正常使用，Object不能使用其衍生类的所有功能吧</h5><p>这是因为 Java 的泛型实现是在编译时进行类型擦除的，但在运行时使用了擦除后的原始类型。当你创建一个泛型实例时，编译器会将泛型类型擦除为其边界或 Object 类型，并在必要时插入类型转换来保证类型安全性。</p><p>在运行时，泛型类型参数被擦除为其边界或 Object 类型，但对于调用方法和访问属性等操作，Java 的动态绑定机制仍然会根据实际对象的类型来调用相应的方法和属性。这是因为 Java 是一种面向对象的语言，它支持多态性，即在运行时确定对象的实际类型并调用相应的方法。</p><p>因此，即使在泛型擦除后，你仍然可以在运行时正常使用对象的方法和属性。例如，如果你有一个泛型集合，其中元素是某个类的实例，即使在编译时无法知道具体的类型，但在运行时，你仍然可以通过遍历集合来访问每个元素，并调用它们的方法和属性。</p><p>总的来说，Java 的泛型擦除只是在编译时进行的，而在运行时仍然可以利用动态绑定机制来调用对象的方法和属性，因此你可以正常使用泛型对象的功能。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaSE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微服务</title>
+      <link href="/2024/05/01/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2024/05/01/java/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MBatis-Plus"><a href="#MBatis-Plus" class="headerlink" title="MBatis Plus"></a>MBatis Plus</h1><blockquote><p>由于时间问题，本文暂时停更…</p></blockquote><hr><ul><li><p>基本使用：</p><p>  <code>Mapper</code>类继承<code>BaseMapper&lt;T&gt;</code>接口，使其具有其方法。涵盖了大部分CRUD场景</p><p>  &gt;<br>  &gt;</p><blockquote><p>动态绑定（Dynamic Binding）是面向对象编程中的一个重要概念，它指的是在运行时确定对象的实际类型，并根据该实际类型调用相应的方法或属性。</p><p>在Java中，动态绑定是通过虚拟机的方法调度机制实现的。当你调用一个对象的方法时，Java虚拟机会根据对象的实际类型来确定要调用的方法。这意味着，即使是通过一个父类的引用来调用方法，实际上会调用子类中的方法，前提是该方法在子类中有重写（override）。</p><p>动态绑定的工作原理可以简单地描述为：</p><ol><li>当你调用一个方法时，虚拟机会检查该方法调用的目标对象的实际类型。</li><li>根据目标对象的实际类型，在其类的方法表（Method Table）或虚方法表（Virtual Method Table，VTable）中找到相应的方法。</li><li>执行找到的方法。</li></ol><p>这种动态绑定机制使得面向对象编程中的多态性成为可能。它允许你编写通用的代码，通过父类或接口的引用来操作对象，而无需关心对象的具体类型，从而提高了代码的灵活性和可维护性。</p></blockquote></li></ul><ul><li>常用注解</li></ul><pre><code>![image-20240501170928927](https://pic.zjcspace.xyz/img/202405011709683.png)id生成策略，使用`type=IdType`类型![image-20240501171134941](%E5%BE%AE%E6%9C%8D%E5%8A%A1.assets/image-20240501171134941.png)![image-20240501171459619](https://pic.zjcspace.xyz/img/202405011715743.png)</code></pre><p>​        <code>@TableFiled</code>加在以下情况:</p><pre><code>    - 解决表字段和成员变量不一致    - `is`开头的变量不会按照驼峰命名，会去掉`is`。    - 与`sql`关键字冲突属性变量名加``包围    - 无法与表中字段对应的成员变量</code></pre><ul><li>基本配置：<br>  <img src="https://pic.zjcspace.xyz/img/202405012057309.png" alt="image-20240501205724424"></li></ul><h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><h3 id="条件构造器"><a href="#条件构造器" class="headerlink" title="条件构造器"></a>条件构造器</h3><p><img src="https://pic.zjcspace.xyz/img/202405012059727.png" alt="image-20240501205939358"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微服务 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微服务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>为什么String是线程安全的?</title>
       <link href="/2024/04/09/java%E9%9D%A2%E8%AF%95/String%E6%9D%82%E8%B0%88/"/>
       <url>/2024/04/09/java%E9%9D%A2%E8%AF%95/String%E6%9D%82%E8%B0%88/</url>
