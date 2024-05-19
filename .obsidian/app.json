@@ -1,0 +1,8 @@
+{
+  "userIgnoreFilters": [
+    "live2d_models/",
+    "node_modules/",
+    "public/",
+    "scaffolds/"
+  ]
+}

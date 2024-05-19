@@ -3,7 +3,8 @@ title: Markdown 语法
 date: 
 tags: 
 mathjax: true
-cover: 
+cover: https://vip1.loli.io/2022/05/12/LQfEFJAdqxncbYB.jpg
+categories: ""
 ---
 
 #  Markdown 基本语法一

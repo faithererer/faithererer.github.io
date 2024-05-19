@@ -1,0 +1,25 @@
+.recent-post-item{
+  background-color: rgba(255, 255, 255, 0.7)!important;
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.9)!important;
+
+  background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+.card-widget{
+  background-color: rgba(255, 255, 255, 0.5)!important;
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.9)!important;
+
+  background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+/** 鼠标*/
+
+html{CURSOR: url(./mouse/body.cur),auto !important;}
+a:hover{CURSOR: url(./mouse/a.cur),auto !important;;}
+i:hover{CURSOR: url(./mouse/a.cur),auto !important;;}
+.menus_item:hover{CURSOR: url(./mouse/a.cur),auto !important;;}

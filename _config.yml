@@ -129,7 +129,7 @@ live2d:
        hOffset: -25 #水平偏移
        vOffset: -20 #垂直偏移
    mobile: 
-       show: true # 手机端是否显示
+       show: false # 手机端是否显示
        scale: 0.5 # 移动设备上的缩放
    react:  
       opacity: 0.7 # 透明度
@@ -176,11 +176,8 @@ cinema: # 追剧设置
 
 
 markdown:
-  plugins:
-    - plugin:
-      name: '@neilsustc/markdown-it-katex'
-      options:
-        strict: false
+    plugins:
+      - '@renbaoshuo/markdown-it-katex'
 
 kramed:
   gfm: true
@@ -190,3 +187,16 @@ kramed:
   breaks: true
   smartLists: true
   smartypants: true
+
+
+
+# 图片懒加载
+lazyload:
+  enable: true
+  loadingImg: /img/loading.gif
+
+
+
+# 重定向
+alias:
+  chatgpt/index.html: https://sbchat.zjcspace.xyz/

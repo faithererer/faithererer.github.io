@@ -1,5 +1,5 @@
 - class_name: 友情鏈接
-  class_desc: 那些人，那些事
+  class_desc: 网友&朋友
   link_list: 
     - name: Hexo
       link: https://hexo.io/zh-tw/
@@ -10,6 +10,12 @@
       link: https://hujingnb.com
       avatar: https://cravatar.cn/avatar/9b59d04405217fb93755abf434aa9c1e?s=256
       descr: 对技术充满好奇的后端工程师
+
+    - name: DongGu's blog
+      link: https://adonggu.github.io/
+      avatar: https://adonggu.github.io/images/%E7%8B%97%E5%AD%90.jpg
+      descr: hhhhh
+
 
 - class_name: 網站
   class_desc: 值得推薦的網站

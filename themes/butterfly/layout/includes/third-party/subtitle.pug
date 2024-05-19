@@ -99,7 +99,39 @@ case source
       } else {
         subtitleType()
       }
+  // new
+  when 4
+    script.
+      function subtitleType () {
+        fetch('http://39.105.126.183:8080/oneDay/one')
+          .then(response => response.text())
+          .then(data => {
+            if (!{effect}) {  
+              const sub = "!{theme.subtitle.sub}".length == 0 ? new Array() : "!{theme.subtitle.sub}".split(',')
+              const both = sub.unshift(data)
+              window.typed = new Typed('#subtitle', {
+                strings: sub,
+                startDelay: 300,
+                typeSpeed: 120,
+                loop: !{theme.subtitle.loop},
+                backSpeed: 40,
+                backDelay: 5000, 
+              })
+            } else {
+              document.getElementById('subtitle').innerHTML = data
+            }
+          })
+      }
 
+      if (!{effect}) {
+        if (typeof Typed === 'function') {
+          subtitleType()
+        } else {
+          getScript('!{url_for(theme.asset.typed)}').then(subtitleType)
+        }
+      } else {
+        subtitleType()
+      }
   default
     - subContent = subContent.length ? subContent : new Array(config.subtitle)
     script.
