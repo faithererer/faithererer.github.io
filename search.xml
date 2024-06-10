@@ -339,9 +339,9 @@
       
         <tags>
             
-            <tag> 链表 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -964,6 +964,33 @@
     
     
     <entry>
+      <title>KMP</title>
+      <link href="/2023/07/09/%E7%AE%97%E6%B3%95/KMP/"/>
+      <url>/2023/07/09/%E7%AE%97%E6%B3%95/KMP/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关键概念"><a href="#关键概念" class="headerlink" title="关键概念:"></a>关键概念:</h1><ul><li><p><strong>前缀</strong>：指除了最后一个字符以外，一个字符串的全部头部组合。</p></li><li><p><strong>后缀</strong>：指除了第一个字符以外，一个字符串的全部尾部组合。</p></li><li><p><strong>部分匹配值</strong>：”前缀”和”后缀”的最长的共有元素的长度。</p></li></ul><h1 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;haystack.<span class="built_in">size</span>()&amp;&amp;j&lt;needle.<span class="built_in">size</span>())&#123;</span><br><span class="line">        <span class="keyword">if</span>(haystack[i]==needle[j])&#123;</span><br><span class="line">            i++;j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            i=i-j+<span class="number">1</span>;j=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j==needle.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">return</span> i-j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int strStr(string haystack, string needle) &#123;</span><br><span class="line">    int i=0,j=0;</span><br><span class="line">    while(i&lt;haystack.size()&amp;&amp;j&lt;needle.size())&#123;</span><br><span class="line">        if(j==-1||haystack[i]==needle[j])&#123;//两个条件可合并</span><br><span class="line">            i++;j++;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            j=next[j];</span><br><span class="line">        &#125;</span><br><span class="line">        if(j==needle.size())&#123;</span><br><span class="line">            return i-j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="生成next数组"><a href="#生成next数组" class="headerlink" title="生成next数组"></a>生成next数组</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>给出字符串<code>aabaaf</code>,求其next数组。</p><p>next数组记录的是模式串的最大相等前后缀的情况。<code>next[i]</code>表示的是，字符串从<code>i</code>(包括<code>i</code>)往前的最大相等前后缀长度。</p><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>使用双指针<code>i</code>,<code>j</code></p><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>数组初始化:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next[0]=-1 //因为一个字符的最大相等前后缀长度=0</span><br></pre></td></tr></table></figure><p>指针初始化:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=0; //前缀</span><br><span class="line">j=-1 //后缀</span><br></pre></td></tr></table></figure><blockquote><p>对于<code>j</code>将会利用接下来的<code>for</code>循环特性进行初始化。</p></blockquote><h3 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// while(i&lt;s.size())&#123;//不能这么写，size_t是无符号整数</span><br><span class="line">int n = s.size();</span><br><span class="line">while(i&lt;n)</span><br><span class="line">if(j==-1||s[i]=s[j])&#123;</span><br><span class="line">i++;j++;</span><br><span class="line">next[i]=j</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">j=next[j];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> KMP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常见算法模板</title>
       <link href="/2023/07/09/%E7%AE%97%E6%B3%95/myTemplate/"/>
       <url>/2023/07/09/%E7%AE%97%E6%B3%95/myTemplate/</url>
@@ -1006,33 +1033,6 @@
         <tags>
             
             <tag> 日常 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>KMP</title>
-      <link href="/2023/07/09/%E7%AE%97%E6%B3%95/KMP/"/>
-      <url>/2023/07/09/%E7%AE%97%E6%B3%95/KMP/</url>
-      
-        <content type="html"><![CDATA[<h1 id="关键概念"><a href="#关键概念" class="headerlink" title="关键概念:"></a>关键概念:</h1><ul><li><p><strong>前缀</strong>：指除了最后一个字符以外，一个字符串的全部头部组合。</p></li><li><p><strong>后缀</strong>：指除了第一个字符以外，一个字符串的全部尾部组合。</p></li><li><p><strong>部分匹配值</strong>：”前缀”和”后缀”的最长的共有元素的长度。</p></li></ul><h1 id="BF算法"><a href="#BF算法" class="headerlink" title="BF算法"></a>BF算法</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">strStr</span><span class="params">(string haystack, string needle)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;haystack.<span class="built_in">size</span>()&amp;&amp;j&lt;needle.<span class="built_in">size</span>())&#123;</span><br><span class="line">        <span class="keyword">if</span>(haystack[i]==needle[j])&#123;</span><br><span class="line">            i++;j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            i=i-j+<span class="number">1</span>;j=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j==needle.<span class="built_in">size</span>())&#123;</span><br><span class="line">            <span class="keyword">return</span> i-j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int strStr(string haystack, string needle) &#123;</span><br><span class="line">    int i=0,j=0;</span><br><span class="line">    while(i&lt;haystack.size()&amp;&amp;j&lt;needle.size())&#123;</span><br><span class="line">        if(j==-1||haystack[i]==needle[j])&#123;//两个条件可合并</span><br><span class="line">            i++;j++;</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            j=next[j];</span><br><span class="line">        &#125;</span><br><span class="line">        if(j==needle.size())&#123;</span><br><span class="line">            return i-j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="生成next数组"><a href="#生成next数组" class="headerlink" title="生成next数组"></a>生成next数组</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>给出字符串<code>aabaaf</code>,求其next数组。</p><p>next数组记录的是模式串的最大相等前后缀的情况。<code>next[i]</code>表示的是，字符串从<code>i</code>(包括<code>i</code>)往前的最大相等前后缀长度。</p><h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>使用双指针<code>i</code>,<code>j</code></p><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>数组初始化:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">next[0]=-1 //因为一个字符的最大相等前后缀长度=0</span><br></pre></td></tr></table></figure><p>指针初始化:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i=0; //前缀</span><br><span class="line">j=-1 //后缀</span><br></pre></td></tr></table></figure><blockquote><p>对于<code>j</code>将会利用接下来的<code>for</code>循环特性进行初始化。</p></blockquote><h3 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// while(i&lt;s.size())&#123;//不能这么写，size_t是无符号整数</span><br><span class="line">int n = s.size();</span><br><span class="line">while(i&lt;n)</span><br><span class="line">if(j==-1||s[i]=s[j])&#123;</span><br><span class="line">i++;j++;</span><br><span class="line">next[i]=j</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">j=next[j];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 算法 </tag>
-            
-            <tag> KMP </tag>
             
         </tags>
       
@@ -1245,9 +1245,9 @@
       
         <tags>
             
-            <tag> 链表 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
