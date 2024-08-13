@@ -948,8 +948,8 @@
     
     <entry>
       <title>Java爬虫——Jsoup</title>
-      <link href="/post/64493/"/>
-      <url>/post/64493/</url>
+      <link href="/post/dbcc2e41/"/>
+      <url>/post/dbcc2e41/</url>
       
         <content type="html"><![CDATA[<div id="postchat_postcontent"><h1 id="Jsoup介绍"><a href="#Jsoup介绍" class="headerlink" title="Jsoup介绍"></a>Jsoup介绍</h1><p><a href="https://jsoup.org/">官网</a></p><h1 id="下载和使用"><a href="#下载和使用" class="headerlink" title="下载和使用"></a>下载和使用</h1><p><a href="https://jsoup.org/download">下载jar包</a></p><p>通过添加Libraries的方式引入：</p><p>1、首先在根目录下创建一个 libs 的目录</p><p>2、打开 File -&gt; Project Structure</p><p>3、单击 Libraries -&gt; “+” -&gt; “Java” -&gt; 选择我们导入的项目主目录，点击OK</p></div>]]></content>
       
