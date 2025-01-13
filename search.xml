@@ -4,6 +4,84 @@
   
     
     <entry>
+      <title></title>
+      <link href="/post/0/"/>
+      <url>/post/0/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><p>1.10</p><ul><li>计划物品</li><li>找好袋子</li><li>物色理发</li></ul><p>1.11</p><ul><li>寄快递</li><li>理发</li><li>洗澡</li></ul></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/post/0/"/>
+      <url>/post/0/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>未命名</title>
+      <link href="/post/3c47b44b/"/>
+      <url>/post/3c47b44b/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><p><a href="https://square-raver-97d.notion.site/cursor-12f9f3b8b57980fbbb52f5106d3a6a00">https://square-raver-97d.notion.site/cursor-12f9f3b8b57980fbbb52f5106d3a6a00</a></p><p><a href="https://cursor.directory/vuejs-typescript-best-practices">https://cursor.directory/vuejs-typescript-best-practices</a></p></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/post/0/"/>
+      <url>/post/0/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">始终用中文回复</span><br><span class="line"></span><br><span class="line">你是一位在 TypeScript、Node.js、Vite、Vue.js、Vue Router、Pinia、VueUse、Headless UI、Element Plus 和 Tailwind 领域的专家，并对这些技术的最佳实践和性能优化技巧有深入了解。</span><br><span class="line"></span><br><span class="line">### 代码风格和结构</span><br><span class="line"></span><br><span class="line">- 编写简洁、可维护且技术上准确的 TypeScript 代码，并附有相关示例。</span><br><span class="line">- 使用函数式和声明式编程模式，避免使用类。</span><br><span class="line">- 优先采用迭代和模块化方法，遵循 DRY 原则，避免代码重复。</span><br><span class="line">- 使用描述性的变量名，包含辅助动词（例如：`isLoading`、`hasError`）。</span><br><span class="line">- 系统化组织文件：每个文件只包含相关内容，如导出组件、子组件、辅助函数、静态内容和类型。</span><br><span class="line"></span><br><span class="line">### 命名约定</span><br><span class="line"></span><br><span class="line">- 目录名使用小写加连字符格式（例如：`components/auth-wizard`）。</span><br><span class="line">- 函数优先使用具名导出。</span><br><span class="line"></span><br><span class="line">### TypeScript 的使用</span><br><span class="line"></span><br><span class="line">- 所有代码都使用 TypeScript，优先使用接口（`interface`），因为接口更易扩展且支持合并。</span><br><span class="line">- 避免使用枚举（`enum`）；用映射（`map`）替代以获得更好的类型安全性和灵活性。</span><br><span class="line">- 使用 TypeScript 接口编写函数式组件。</span><br><span class="line"></span><br><span class="line">### 语法和格式</span><br><span class="line"></span><br><span class="line">- 纯函数使用 `function` 关键字，以利用提升和更清晰的语义。</span><br><span class="line">- 始终使用 Vue Composition API 的 `script setup` 语法。</span><br><span class="line"></span><br><span class="line">### UI 和样式</span><br><span class="line"></span><br><span class="line">- 使用 Headless UI、Element Plus 和 Tailwind等 实现组件和样式。</span><br><span class="line">- 使用 Tailwind CSS 实现响应式设计，采用移动优先的方法。</span><br><span class="line">- 风格优雅符合现代化UI，动画富有美感</span><br><span class="line"></span><br><span class="line">### 性能优化</span><br><span class="line"></span><br><span class="line">- 在适用的地方使用 VueUse 函数来增强响应性和性能。</span><br><span class="line">- 使用 `Suspense` 包裹异步组件，并提供备用 UI。</span><br><span class="line">- 对非关键组件实施动态加载。</span><br><span class="line">- 优化图片：使用 WebP 格式，包含尺寸数据，实现懒加载。</span><br><span class="line">- 在 Vite 构建过程中实施优化分块策略，如代码分割，生成更小的包体积。</span><br><span class="line"></span><br><span class="line">## 注意给代码加上注释，使初学者一目了然</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果需要执行命令，请暂停创建文件，让我先执行命令，包管理工具使用npm  </span><br><span class="line">请你根据我的需要，一步一步思考，给我开发这个项目。   </span><br><span class="line">后端还未开发，使用模拟数据，而且我希望你可以给出必要api文档，进行联调。对于在线协作的相关组件请暂时搁置，先完善好网盘的部分 ，给出整体的框架</span><br><span class="line">对于必要部分进行注释  </span><br><span class="line">项目已经搭建好通过:npm create vite@latest online-collab-platform -- --template vue-ts。在开始之前请给出你的开发功能模块清单，然后逐个实现</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/post/0/"/>
+      <url>/post/0/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkdir</span> <span class="string">-p</span> <span class="string">/opt/clouddrive2</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">-p</span> <span class="string">/opt/clouddrive2/cloudmounts</span>    <span class="comment"># 用于存放云挂载数据</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">-p</span> <span class="string">/opt/clouddrive2/config</span>         <span class="comment"># 用于存放配置文件</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">-p</span> <span class="string">/opt/clouddrive2/media</span>          <span class="comment"># 可选，用于存放媒体文件</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>docker-compose.yml<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;2.1&quot;</span><br><span class="line">services:</span><br><span class="line">  cloudnas:</span><br><span class="line">    image: cloudnas/clouddrive2</span><br><span class="line">    container_name: clouddrive2</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">      - CLOUDDRIVE_HOME=/Config</span><br><span class="line">    volumes:</span><br><span class="line">      - /opt/clouddrive2/cloudmounts:/CloudNAS:shared        # 将云挂载目录挂载到容器</span><br><span class="line">      - /opt/clouddrive2/config:/Config                      # 将配置文件目录挂载到容器</span><br><span class="line">      - /opt/clouddrive2/media:/media:shared                 # 可选：将媒体目录挂载到容器</span><br><span class="line">    devices:</span><br><span class="line">      - /dev/fuse:/dev/fuse                                  # FUSE 支持，允许挂载云存储</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    pid: &quot;host&quot;</span><br><span class="line">    privileged: true</span><br><span class="line">    network_mode: &quot;host&quot;                                     # 使用宿主机网络模式</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>未命名</title>
+      <link href="/post/3c47b44b/"/>
+      <url>/post/3c47b44b/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><p>服务器详细信息</p><div class="table-container"><table><thead><tr><th>主机</th><th>ip</th><th>挂载目录</th></tr></thead><tbody><tr><td>主机1</td><td>192.168.230.136</td><td>/myminio1</td></tr><tr><td>主机2</td><td>192.168.230.135</td><td>/myminio1</td></tr></tbody></table></div><p>使用docker部署</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /myminio1/data</span><br><span class="line"></span><br><span class="line">docker stop minio1</span><br><span class="line">docker rm minio1</span><br><span class="line">docker stop minio2</span><br><span class="line">docker rm minio2</span><br></pre></td></tr></table></figure><p>主机1：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name minio1 \</span><br><span class="line">  -p <span class="number">9000</span>:<span class="number">9000</span> \</span><br><span class="line">  -p <span class="number">9001</span>:<span class="number">9001</span> \</span><br><span class="line">  -v /myminio1/<span class="attr">data</span>:/data \</span><br><span class="line">  -e <span class="variable constant_">MINIO_ROOT_USER</span>=minio_root_user \</span><br><span class="line">  -e <span class="variable constant_">MINIO_ROOT_PASSWORD</span>=minio_root_password \</span><br><span class="line">  -e <span class="variable constant_">MINIO_DISTRIBUTED_MODE_ENABLED</span>=yes \</span><br><span class="line">  -e <span class="variable constant_">MINIO_DISTRIBUTED_NODES</span>=<span class="string">&quot;192.168.230.136:9000,192.168.230.135:9000&quot;</span> \</span><br><span class="line">  minio/minio server /data --<span class="variable language_">console</span>-address <span class="string">&quot;:9001&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>主机2<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name minio2 \</span><br><span class="line">  -p 9000:9000 \</span><br><span class="line">  -p 9001:9001 \</span><br><span class="line">  -v /myminio1/data:/data \</span><br><span class="line">  -e MINIO_ROOT_USER=minio_root_user \</span><br><span class="line">  -e MINIO_ROOT_PASSWORD=minio_root_password \</span><br><span class="line">  -e MINIO_DISTRIBUTED_MODE_ENABLED=yes \</span><br><span class="line">  -e MINIO_DISTRIBUTED_NODES=&quot;192.168.230.136:9000,192.168.230.135:9000&quot; \</span><br><span class="line">  minio/minio server /data --console-address &quot;:9001&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><p>普通<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name minio1 \</span><br><span class="line">  -p 9000:9000 \</span><br><span class="line">  -p 9001:9001 \</span><br><span class="line">  -v /myminio1/data:/data \</span><br><span class="line">  -e MINIO_ROOT_USER=minio_root_user \</span><br><span class="line">  -e MINIO_ROOT_PASSWORD=minio_root_password \</span><br><span class="line">  minio/minio server /data --console-address &quot;:9001&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 将宿主机的 9000 端口流量转发到容器的 9000 端口</span><br><span class="line">sudo iptables -t nat -A PREROUTING -p tcp --dport 9000 -j DNAT --to-destination 192.168.231.136:9000</span><br><span class="line">sudo iptables -A FORWARD -d 192.168.231.136 -p tcp --dport 9000 -j ACCEPT</span><br><span class="line"></span><br><span class="line"># 将宿主机的 9001 端口流量转发到容器的 9001 端口</span><br><span class="line">sudo iptables -t nat -A PREROUTING -p tcp --dport 9001 -j DNAT --to-destination 192.168.231.136:9001</span><br><span class="line">sudo iptables -A FORWARD -d 192.168.231.136 -p tcp --dport 9001 -j ACCEPT</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>锁升级</title>
       <link href="/post/28842/"/>
       <url>/post/28842/</url>
@@ -332,9 +410,9 @@
       
         <tags>
             
-            <tag> 链表 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -717,9 +795,9 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> 链表 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -746,9 +824,9 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> 链表 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -838,11 +916,11 @@
     
     
     <entry>
-      <title>六级作文</title>
-      <link href="/post/11144/"/>
-      <url>/post/11144/</url>
+      <title>大三-每日任务</title>
+      <link href="/post/44917/"/>
+      <url>/post/44917/</url>
       
-        <content type="html"><![CDATA[<div id="postchat_postcontent"><p>In the modern era, social progress enables an increasingly number of people to fetch numerous infortmation, with more and more people using Internet. There is a necessity for us to have a clear mind to think critically,and to make rational chioce. The grounds and evidence for my position are outlined below.<br>First and foremost, it’s beyond dispute that we shoud have </p><h1 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h1><p>in modern eras, social progress enables an increasing number <strong> to </strong> with <strong><br>There is a necessity that </strong> . The grounds and evidence for my position are outlined below.</p><h1 id="谚语"><a href="#谚语" class="headerlink" title="谚语"></a>谚语</h1><p>Speaking of __ ，viewpoints differ voilently, but it’s ackonwledged by all that。 The grounds and evidence for my position are outlined below.</p><h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p><strong> . Speaking of this subject.viewpoint differ violently, but it’s acknowledged that </strong></p><p>万能理由：<br><strong>CHEMIST</strong><br>convience<br>health<br>environment<br>money<br>interpersonal/relationship<br>success work, studyo0</p><p>The Qinghai-Tibet Plateau, located in southwest of China, covers area of 2.3 millon kilometers square. With above the altitude of 4000 meters, it is enjoying repution of “World Roof”. </p></div>]]></content>
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>四级没过,内心受到沉重打击，且临近毕业，碌碌无为，一事无成。因此发奋图强，以一雪前耻，以求无怨无悔。</p><h1 id="2023-08"><a href="#2023-08" class="headerlink" title="2023-08"></a>2023-08</h1><h2 id="2023-08-29"><a href="#2023-08-29" class="headerlink" title="2023-08-29"></a>2023-08-29</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div><!-- <div class='checkbox red times'><input type="checkbox" />            <p>checked</p>            </div> --><h2 id="2023-08-31"><a href="#2023-08-31" class="headerlink" title="2023-08-31"></a>2023-08-31</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>算法副本定档</p>            </div><blockquote><p>经过斟酌，我选择通过以分模块的方式来刷leetcode的题来提高和巩固我的算法能力</p></blockquote><h2 id="2023-09-01"><a href="#2023-09-01" class="headerlink" title="2023-09-01"></a>2023-09-01</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>leetcode-链表</p>            </div><h2 id="2023-09-02"><a href="#2023-09-02" class="headerlink" title="2023-09-02"></a>2023-09-02</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>leetcode-队列，栈</p>            </div><blockquote><p>单调栈知识欠缺</p><h2 id="2023-09-05"><a href="#2023-09-05" class="headerlink" title="2023-09-05"></a>2023-09-05</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>单调栈问题解决</p>            </div><h2 id="2023-09-09"><a href="#2023-09-09" class="headerlink" title="2023-09-09"></a>2023-09-09</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div></blockquote></div>]]></content>
       
       
       <categories>
@@ -863,11 +941,11 @@
     
     
     <entry>
-      <title>大三-每日任务</title>
-      <link href="/post/44917/"/>
-      <url>/post/44917/</url>
+      <title>六级作文</title>
+      <link href="/post/11144/"/>
+      <url>/post/11144/</url>
       
-        <content type="html"><![CDATA[<div id="postchat_postcontent"><h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>四级没过,内心受到沉重打击，且临近毕业，碌碌无为，一事无成。因此发奋图强，以一雪前耻，以求无怨无悔。</p><h1 id="2023-08"><a href="#2023-08" class="headerlink" title="2023-08"></a>2023-08</h1><h2 id="2023-08-29"><a href="#2023-08-29" class="headerlink" title="2023-08-29"></a>2023-08-29</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div><!-- <div class='checkbox red times'><input type="checkbox" />            <p>checked</p>            </div> --><h2 id="2023-08-31"><a href="#2023-08-31" class="headerlink" title="2023-08-31"></a>2023-08-31</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>算法副本定档</p>            </div><blockquote><p>经过斟酌，我选择通过以分模块的方式来刷leetcode的题来提高和巩固我的算法能力</p></blockquote><h2 id="2023-09-01"><a href="#2023-09-01" class="headerlink" title="2023-09-01"></a>2023-09-01</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>leetcode-链表</p>            </div><h2 id="2023-09-02"><a href="#2023-09-02" class="headerlink" title="2023-09-02"></a>2023-09-02</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>leetcode-队列，栈</p>            </div><blockquote><p>单调栈知识欠缺</p><h2 id="2023-09-05"><a href="#2023-09-05" class="headerlink" title="2023-09-05"></a>2023-09-05</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>单调栈问题解决</p>            </div><h2 id="2023-09-09"><a href="#2023-09-09" class="headerlink" title="2023-09-09"></a>2023-09-09</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>背单词</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>编译原理</p>            </div></blockquote></div>]]></content>
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><p>In the modern era, social progress enables an increasingly number of people to fetch numerous infortmation, with more and more people using Internet. There is a necessity for us to have a clear mind to think critically,and to make rational chioce. The grounds and evidence for my position are outlined below.<br>First and foremost, it’s beyond dispute that we shoud have </p><h1 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h1><p>in modern eras, social progress enables an increasing number <strong> to </strong> with <strong><br>There is a necessity that </strong> . The grounds and evidence for my position are outlined below.</p><h1 id="谚语"><a href="#谚语" class="headerlink" title="谚语"></a>谚语</h1><p>Speaking of __ ，viewpoints differ voilently, but it’s ackonwledged by all that。 The grounds and evidence for my position are outlined below.</p><h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p><strong> . Speaking of this subject.viewpoint differ violently, but it’s acknowledged that </strong></p><p>万能理由：<br><strong>CHEMIST</strong><br>convience<br>health<br>environment<br>money<br>interpersonal/relationship<br>success work, studyo0</p><p>The Qinghai-Tibet Plateau, located in southwest of China, covers area of 2.3 millon kilometers square. With above the altitude of 4000 meters, it is enjoying repution of “World Roof”. </p></div>]]></content>
       
       
       <categories>
@@ -1276,9 +1354,9 @@
       
         <tags>
             
-            <tag> 链表 </tag>
-            
             <tag> Leetcode </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
