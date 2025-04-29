@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>【废弃】团队协作功能 | 一个网站</title><meta name="author" content="Jc Zhang"><meta name="copyright" content="Jc Zhang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="为了支持多人协作，系统实现了完整的团队协作功能： 10.1 团队管理12345678910111213141516graph TD    A[用户] -->|创建| B[团队]    A -->|管理| C[团队成员]    A -->|分配| D[成员角色]    B -->|拥有| E[团队文档]    C -->|访问| E        subgraph &amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【废弃】团队协作功能">
+<meta property="og:url" content="https://blog.zjcspace.xyz/post/d673d6d7/index.html">
+<meta property="og:site_name" content="一个网站">
+<meta property="og:description" content="为了支持多人协作，系统实现了完整的团队协作功能： 10.1 团队管理12345678910111213141516graph TD    A[用户] -->|创建| B[团队]    A -->|管理| C[团队成员]    A -->|分配| D[成员角色]    B -->|拥有| E[团队文档]    C -->|访问| E        subgraph &amp;q">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.loliapi.cn/i/pc/img456.webp">
+<meta property="article:published_time" content="2025-04-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-29T11:09:55.960Z">
+<meta property="article:author" content="Jc Zhang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.loliapi.cn/i/pc/img456.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zjcspace.xyz/post/d673d6d7/"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【废弃】团队协作功能',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-04-29 19:09:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/my1.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3543118_xz9l4o492hg.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="https://avatars.githubusercontent.com/u/104252444?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">81</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/storehouse/"><i class="fa-fw fas fa-home"></i><span> 仓库</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.loliapi.cn/i/pc/img456.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">一个网站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fa-brands fa-bilibili"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/storehouse/"><i class="fa-fw fas fa-home"></i><span> 仓库</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【废弃】团队协作功能</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-04-28T16:00:00.000Z" title="发表于 2025-04-29 00:00:00">2025-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-04-29T11:09:55.960Z" title="更新于 2025-04-29 19:09:55">2025-04-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="【废弃】团队协作功能"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div id="postchat_postcontent"><p>为了支持多人协作，系统实现了完整的团队协作功能：</p>
+<h3 id="10-1-团队管理"><a href="#10-1-团队管理" class="headerlink" title="10.1 团队管理"></a>10.1 团队管理</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    A[用户] --&gt;|创建| B[团队]</span><br><span class="line">    A --&gt;|管理| C[团队成员]</span><br><span class="line">    A --&gt;|分配| D[成员角色]</span><br><span class="line">    B --&gt;|拥有| E[团队文档]</span><br><span class="line">    C --&gt;|访问| E</span><br><span class="line">    </span><br><span class="line">    subgraph "角色权限"</span><br><span class="line">        D1[owner-所有者]</span><br><span class="line">        D2[admin-管理员]</span><br><span class="line">        D3[member-成员]</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    D1 --&gt;|完全控制| B</span><br><span class="line">    D2 --&gt;|管理权限| C</span><br><span class="line">    D3 --&gt;|使用权限| E</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="10-2-文档归属与权限"><a href="#10-2-文档归属与权限" class="headerlink" title="10.2 文档归属与权限"></a>10.2 文档归属与权限</h3><p>每个云文档都归属于一个团队或个人，系统中的文档权限设计如下：</p>
+<ul>
+<li><p><strong>文档类型</strong>：</p>
+<ul>
+<li>个人文档：归属于个人，可自行决定是否共享</li>
+<li>团队文档：归属于团队，团队成员默认具有读写权限</li>
+</ul>
+</li>
+<li><p><strong>权限级别</strong>：</p>
+<ul>
+<li><code>read</code>：只读权限</li>
+<li><code>write</code>：编辑权限</li>
+<li><code>admin</code>：管理权限（可进行权限分配）</li>
+</ul>
+</li>
+<li><p><strong>权限分配</strong>：</p>
+<ul>
+<li>文档创建者自动获得管理权限</li>
+<li>团队文档对团队成员默认具有<code>write</code>权限</li>
+<li>团队管理员可调整成员对特定文档的权限</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-3-团队文档工作流"><a href="#10-3-团队文档工作流" class="headerlink" title="10.3 团队文档工作流"></a>10.3 团队文档工作流</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant User1 as 团队成员1</span><br><span class="line">    participant User2 as 团队成员2</span><br><span class="line">    participant API as REST API</span><br><span class="line">    participant Team as 团队服务</span><br><span class="line">    participant Doc as 文档服务</span><br><span class="line">    participant WS as WebSocket服务</span><br><span class="line">    </span><br><span class="line">    User1-&gt;&gt;API: 创建团队文档</span><br><span class="line">    API-&gt;&gt;Team: 验证团队成员身份</span><br><span class="line">    Team--&gt;&gt;API: 验证通过</span><br><span class="line">    API-&gt;&gt;Doc: 创建团队文档</span><br><span class="line">    Doc-&gt;&gt;Doc: 设置默认权限</span><br><span class="line">    Doc--&gt;&gt;API: 返回文档ID</span><br><span class="line">    API--&gt;&gt;User1: 创建成功</span><br><span class="line">    </span><br><span class="line">    User2-&gt;&gt;API: 查询团队文档列表</span><br><span class="line">    API-&gt;&gt;Team: 验证团队成员身份</span><br><span class="line">    Team--&gt;&gt;API: 验证通过</span><br><span class="line">    API-&gt;&gt;Doc: 获取团队文档列表</span><br><span class="line">    Doc--&gt;&gt;API: 返回文档列表</span><br><span class="line">    API--&gt;&gt;User2: 文档列表</span><br><span class="line">    </span><br><span class="line">    User2-&gt;&gt;WS: 建立WebSocket连接</span><br><span class="line">    WS-&gt;&gt;Doc: 验证文档访问权限</span><br><span class="line">    Doc-&gt;&gt;Team: 检查团队权限</span><br><span class="line">    Team--&gt;&gt;Doc: 返回权限信息</span><br><span class="line">    Doc--&gt;&gt;WS: 验证通过</span><br><span class="line">    WS--&gt;&gt;User2: 连接成功</span><br><span class="line">    </span><br><span class="line">    User1-&gt;&gt;WS: 发送文档更新</span><br><span class="line">    WS-&gt;&gt;WS: 广播到所有连接的成员</span><br><span class="line">    WS--&gt;&gt;User2: 接收实时更新</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="10-4-团队功能API"><a href="#10-4-团队功能API" class="headerlink" title="10.4 团队功能API"></a>10.4 团队功能API</h3><p>团队功能提供以下API接口：</p>
+<ul>
+<li><p>团队管理：</p>
+<ul>
+<li><code>POST /teams</code> - 创建团队</li>
+<li><code>PUT /teams/{teamId}</code> - 更新团队信息</li>
+<li><code>DELETE /teams/{teamId}</code> - 删除团队</li>
+<li><code>GET /teams/{teamId}</code> - 获取团队信息</li>
+<li><code>GET /teams</code> - 获取用户所在团队列表</li>
+</ul>
+</li>
+<li><p>团队成员管理：</p>
+<ul>
+<li><code>POST /teams/{teamId}/members</code> - 添加团队成员</li>
+<li><code>PUT /teams/{teamId}/members/{userId}/role</code> - 更新成员角色</li>
+<li><code>DELETE /teams/{teamId}/members/{userId}</code> - 移除团队成员</li>
+<li><code>GET /teams/{teamId}/members</code> - 获取团队成员列表</li>
+</ul>
+</li>
+<li><p>团队文档：</p>
+<ul>
+<li><code>POST /documents/team/{teamId}</code> - 创建团队文档</li>
+<li><code>GET /documents/team/{teamId}</code> - 获取团队文档列表# Yjs+Monaco 协同编辑平台架构实现文档</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-系统架构概述"><a href="#1-系统架构概述" class="headerlink" title="1. 系统架构概述"></a>1. 系统架构概述</h2><p>本文档详细描述了支持Yjs+Monaco前端协同编辑的后端系统架构实现。该系统采用MySQL存储元数据和MongoDB存储文档内容的混合数据存储策略，主要负责实时数据同步、持久化存储、版本管理和用户权限控制。另外，系统支持团队协作功能，每个文档都可以归属于一个团队，团队成员可以共同编辑文档。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    Client1["前端客户端1 (Yjs+Monaco)"] &lt;--&gt;|WebSocket| WS[WebSocket服务]</span><br><span class="line">    Client2["前端客户端2 (Yjs+Monaco)"] &lt;--&gt;|WebSocket| WS</span><br><span class="line">    Client3["前端客户端3 (Yjs+Monaco)"] &lt;--&gt;|WebSocket| WS</span><br><span class="line">    </span><br><span class="line">    Client1 &lt;--&gt;|HTTP| RC[REST控制器]</span><br><span class="line">    Client2 &lt;--&gt;|HTTP| RC</span><br><span class="line">    Client3 &lt;--&gt;|HTTP| RC</span><br><span class="line">    </span><br><span class="line">    WS &lt;--&gt; YDoc[文档同步服务]</span><br><span class="line">    RC &lt;--&gt; DocService[文档服务]</span><br><span class="line">    RC &lt;--&gt; TeamService[团队服务]</span><br><span class="line">    </span><br><span class="line">    YDoc &lt;--&gt; DocService</span><br><span class="line">    DocService &lt;--&gt; YDoc</span><br><span class="line">    DocService &lt;--&gt; TeamService</span><br><span class="line">    </span><br><span class="line">    DocService &lt;--&gt; MetaDB[(MySQL元数据)]</span><br><span class="line">    YDoc &lt;--&gt; ContentDB[(MongoDB内容)]</span><br><span class="line">    TeamService &lt;--&gt; MetaDB</span><br><span class="line">    </span><br><span class="line">    Auth[认证授权服务] &lt;--&gt; Client1</span><br><span class="line">    Auth &lt;--&gt; Client2</span><br><span class="line">    Auth &lt;--&gt; Client3</span><br><span class="line">    Auth &lt;--&gt; WS</span><br><span class="line">    Auth &lt;--&gt; RC</span><br><span class="line">    </span><br><span class="line">    Cache[Redis缓存] &lt;--&gt; DocService</span><br><span class="line">    Cache &lt;--&gt; YDoc</span><br><span class="line">    Cache &lt;--&gt; TeamService</span><br><span class="line">    </span><br><span class="line">    Task[定时任务] --&gt; YDoc</span><br><span class="line">    </span><br><span class="line">    subgraph "Java SpringBoot后端"</span><br><span class="line">        WS</span><br><span class="line">        RC</span><br><span class="line">        YDoc</span><br><span class="line">        DocService</span><br><span class="line">        TeamService</span><br><span class="line">        Auth</span><br><span class="line">        Task</span><br><span class="line">    end</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="2-数据模型设计"><a href="#2-数据模型设计" class="headerlink" title="2. 数据模型设计"></a>2. 数据模型设计</h2><h3 id="2-1-MySQL元数据模型"><a href="#2-1-MySQL元数据模型" class="headerlink" title="2.1 MySQL元数据模型"></a>2.1 MySQL元数据模型</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class User {</span><br><span class="line">        +Long id</span><br><span class="line">        +String username</span><br><span class="line">        +String password</span><br><span class="line">        +String email</span><br><span class="line">        +String avatar</span><br><span class="line">        +Integer status</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +LocalDateTime updateTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class Team {</span><br><span class="line">        +Long id</span><br><span class="line">        +String name</span><br><span class="line">        +String description</span><br><span class="line">        +Long ownerId</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +LocalDateTime updateTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class TeamMember {</span><br><span class="line">        +Long id</span><br><span class="line">        +Long teamId</span><br><span class="line">        +Long userId</span><br><span class="line">        +String role</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +LocalDateTime updateTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class DocumentMeta {</span><br><span class="line">        +Long id</span><br><span class="line">        +String docId</span><br><span class="line">        +String title</span><br><span class="line">        +String description</span><br><span class="line">        +String type</span><br><span class="line">        +String language</span><br><span class="line">        +Long ownerId</span><br><span class="line">        +Long teamId</span><br><span class="line">        +String sharedType</span><br><span class="line">        +Integer status</span><br><span class="line">        +LocalDateTime lastEditTime</span><br><span class="line">        +Long lastEditUserId</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +LocalDateTime updateTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class DocumentPermission {</span><br><span class="line">        +Long id</span><br><span class="line">        +String docId</span><br><span class="line">        +Long userId</span><br><span class="line">        +Long teamId</span><br><span class="line">        +String permissionType</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +LocalDateTime updateTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class DocumentVersion {</span><br><span class="line">        +Long id</span><br><span class="line">        +String docId</span><br><span class="line">        +Integer version</span><br><span class="line">        +String title</span><br><span class="line">        +Long userId</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">        +Boolean isDeleted</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class DocumentHistory {</span><br><span class="line">        +Long id</span><br><span class="line">        +String docId</span><br><span class="line">        +Long userId</span><br><span class="line">        +String operationType</span><br><span class="line">        +String operationDesc</span><br><span class="line">        +LocalDateTime createTime</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    User "1" --&gt; "*" TeamMember : 创建/加入</span><br><span class="line">    Team "1" --&gt; "*" TeamMember : 包含</span><br><span class="line">    Team "1" -- "1" User : 所有者</span><br><span class="line">    User "1" --&gt; "*" DocumentMeta : 创建</span><br><span class="line">    Team "1" --&gt; "*" DocumentMeta : 拥有</span><br><span class="line">    DocumentMeta "1" --&gt; "*" DocumentPermission : 授权</span><br><span class="line">    DocumentMeta "1" --&gt; "*" DocumentVersion : 版本历史</span><br><span class="line">    DocumentMeta "1" --&gt; "*" DocumentHistory : 操作历史</span><br><span class="line">    User "1" --&gt; "*" DocumentVersion : 创建版本</span><br><span class="line">    User "1" --&gt; "*" DocumentHistory : 操作记录</span><br><span class="line">    TeamMember --o Team : 成员关系</span><br><span class="line">    TeamMember --o User : 成员关系</span><br><span class="line">    DocumentPermission --o User : 个人权限</span><br><span class="line">    DocumentPermission --o Team : 团队权限</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-2-MongoDB文档内容模型"><a href="#2-2-MongoDB文档内容模型" class="headerlink" title="2.2 MongoDB文档内容模型"></a>2.2 MongoDB文档内容模型</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class YjsDocument {</span><br><span class="line">        +String id</span><br><span class="line">        +String docId</span><br><span class="line">        +Binary stateVector</span><br><span class="line">        +List~UpdateEntry~ updates</span><br><span class="line">        +LocalDateTime createdAt</span><br><span class="line">        +LocalDateTime lastModifiedAt</span><br><span class="line">        +Map~String,Object~ metadata</span><br><span class="line">        +addUpdate(byte[] update, Long userId, String username)</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class UpdateEntry {</span><br><span class="line">        +LocalDateTime timestamp</span><br><span class="line">        +Long userId</span><br><span class="line">        +String username</span><br><span class="line">        +Binary update</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    class DocumentVersionContent {</span><br><span class="line">        +String id</span><br><span class="line">        +String docId</span><br><span class="line">        +Integer version</span><br><span class="line">        +Binary stateVector</span><br><span class="line">        +Long userId</span><br><span class="line">        +String username</span><br><span class="line">        +LocalDateTime createdAt</span><br><span class="line">        +String remark</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    YjsDocument "1" --&gt; "*" UpdateEntry</span><br><span class="line">    YjsDocument "1" -- "*" DocumentVersionContent</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="3-系统组件详细实现"><a href="#3-系统组件详细实现" class="headerlink" title="3. 系统组件详细实现"></a>3. 系统组件详细实现</h2><h3 id="3-1-数据访问层"><a href="#3-1-数据访问层" class="headerlink" title="3.1 数据访问层"></a>3.1 数据访问层</h3><p>实现了基于MyBatis Plus的MySQL数据访问层和基于Spring Data MongoDB的MongoDB数据访问层：</p>
+<h4 id="3-1-1-MySQL-Mapper"><a href="#3-1-1-MySQL-Mapper" class="headerlink" title="3.1.1 MySQL Mapper"></a>3.1.1 MySQL Mapper</h4><p>MyBatis Plus Mapper接口用于操作MySQL中的元数据，包括：</p>
+<ul>
+<li>DocumentMetaMapper - 文档元数据管理</li>
+<li>DocumentPermissionMapper - 文档权限管理</li>
+<li>DocumentVersionMapper - 文档版本管理</li>
+<li>DocumentHistoryMapper - 文档历史记录管理</li>
+<li>TeamMapper - 团队管理</li>
+<li>TeamMemberMapper - 团队成员管理</li>
+<li>UserMapper - 用户管理</li>
+</ul>
+<h4 id="3-1-2-MongoDB-Repository"><a href="#3-1-2-MongoDB-Repository" class="headerlink" title="3.1.2 MongoDB Repository"></a>3.1.2 MongoDB Repository</h4><p>MongoDB Repository接口用于操作MongoDB中的文档内容数据，包括：</p>
+<ul>
+<li>YjsDocumentRepository - Yjs文档内容管理</li>
+<li>DocumentVersionContentRepository - 文档版本内容管理</li>
+</ul>
+<h3 id="3-2-服务层"><a href="#3-2-服务层" class="headerlink" title="3.2 服务层"></a>3.2 服务层</h3><p>服务层实现了业务逻辑处理，主要包括以下服务：</p>
+<h4 id="3-2-1-YjsDocumentService"><a href="#3-2-1-YjsDocumentService" class="headerlink" title="3.2.1 YjsDocumentService"></a>3.2.1 YjsDocumentService</h4><p>Yjs文档服务，负责文档内容的存储、加载和版本管理：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">YjsDocumentService</span> {</span><br><span class="line">    <span class="comment">// 存储文档更新</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">storeUpdate</span><span class="params">(String docId, <span class="type">byte</span>[] update, Long userId, String username)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取文档当前状态</span></span><br><span class="line">    <span class="type">byte</span>[] getDocumentState(String docId);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建文档版本</span></span><br><span class="line">    Integer <span class="title function_">createVersion</span><span class="params">(String docId, String title, String remark, Long userId, String username)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取文档版本列表</span></span><br><span class="line">    List&lt;DocumentVersionVO&gt; <span class="title function_">getVersions</span><span class="params">(String docId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 回滚到指定版本</span></span><br><span class="line">    <span class="type">byte</span>[] rollbackToVersion(String docId, Integer version);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 其他文档操作方法</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="3-2-2-DocumentService"><a href="#3-2-2-DocumentService" class="headerlink" title="3.2.2 DocumentService"></a>3.2.2 DocumentService</h4><p>文档元数据服务，负责文档元数据和权限管理：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">DocumentService</span> {</span><br><span class="line">    <span class="comment">// 创建文档</span></span><br><span class="line">    String <span class="title function_">createDocument</span><span class="params">(DocumentMeta documentMeta, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建团队文档</span></span><br><span class="line">    String <span class="title function_">createTeamDocument</span><span class="params">(DocumentMeta documentMeta, Long teamId, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 更新文档元数据</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">updateDocument</span><span class="params">(DocumentMeta documentMeta, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 删除文档</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">deleteDocument</span><span class="params">(String docId, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取文档元数据</span></span><br><span class="line">    DocumentMetaVO <span class="title function_">getDocumentMeta</span><span class="params">(String docId, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 查询文档列表</span></span><br><span class="line">    IPage&lt;DocumentMetaVO&gt; <span class="title function_">getUserDocuments</span><span class="params">(Page&lt;DocumentMetaVO&gt; page, Long userId, String keyword)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 检查文档权限</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">checkPermission</span><span class="params">(String docId, Long userId, String permissionType)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 其他文档元数据和权限操作方法</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="3-2-3-TeamService"><a href="#3-2-3-TeamService" class="headerlink" title="3.2.3 TeamService"></a>3.2.3 TeamService</h4><p>团队服务，负责团队管理和成员权限控制：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">TeamService</span> {</span><br><span class="line">    <span class="comment">// 创建团队</span></span><br><span class="line">    Long <span class="title function_">createTeam</span><span class="params">(Team team, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 更新团队</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">updateTeam</span><span class="params">(Team team, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 删除团队</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">deleteTeam</span><span class="params">(Long teamId, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 添加团队成员</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">addTeamMember</span><span class="params">(Long teamId, Long userId, String role, Long adminId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 更新成员角色</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">updateTeamMemberRole</span><span class="params">(Long teamId, Long userId, String role, Long adminId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 移除团队成员</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">removeTeamMember</span><span class="params">(Long teamId, Long userId, Long adminId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 检查用户权限</span></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">isTeamMember</span><span class="params">(Long teamId, Long userId)</span>;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">isTeamAdmin</span><span class="params">(Long teamId, Long userId)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 其他团队管理方法</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-3-WebSocket通信"><a href="#3-3-WebSocket通信" class="headerlink" title="3.3 WebSocket通信"></a>3.3 WebSocket通信</h3><p>WebSocket是协同编辑的核心，用于实时传输Yjs更新数据：</p>
+<h4 id="3-3-1-WebSocket配置"><a href="#3-3-1-WebSocket配置" class="headerlink" title="3.3.1 WebSocket配置"></a>3.3.1 WebSocket配置</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableWebSocket</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebSocketConfig</span> <span class="keyword">implements</span> <span class="title class_">WebSocketConfigurer</span> {</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> YjsWebSocketHandler yjsWebSocketHandler;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">registerWebSocketHandlers</span><span class="params">(WebSocketHandlerRegistry registry)</span> {</span><br><span class="line">        registry.addHandler(yjsWebSocketHandler, <span class="string">"/ws/yjs/{docId}"</span>)</span><br><span class="line">                .addInterceptors(<span class="keyword">new</span> <span class="title class_">HttpSessionHandshakeInterceptor</span>())</span><br><span class="line">                .setAllowedOrigins(<span class="string">"*"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="3-3-2-WebSocket处理器"><a href="#3-3-2-WebSocket处理器" class="headerlink" title="3.3.2 WebSocket处理器"></a>3.3.2 WebSocket处理器</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">YjsWebSocketHandler</span> <span class="keyword">extends</span> <span class="title class_">TextWebSocketHandler</span> {</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> YjsDocumentService yjsDocumentService;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DocumentService documentService;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Set&lt;WebSocketSession&gt;&gt; roomSessions = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Long&gt; sessionUserMap = <span class="keyword">new</span> <span class="title class_">ConcurrentHashMap</span>&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// WebSocket连接建立</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">afterConnectionEstablished</span><span class="params">(WebSocketSession session)</span> <span class="keyword">throws</span> Exception {</span><br><span class="line">        <span class="comment">// 实现连接建立逻辑</span></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 处理二进制消息（Yjs更新）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">handleBinaryMessage</span><span class="params">(WebSocketSession session, BinaryMessage message)</span> <span class="keyword">throws</span> Exception {</span><br><span class="line">        <span class="comment">// 实现Yjs更新处理逻辑</span></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 其他WebSocket处理方法</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-4-REST-API控制器"><a href="#3-4-REST-API控制器" class="headerlink" title="3.4 REST API控制器"></a>3.4 REST API控制器</h3><p>REST API提供了文档管理的HTTP接口：</p>
+<h4 id="3-4-1-文档控制器"><a href="#3-4-1-文档控制器" class="headerlink" title="3.4.1 文档控制器"></a>3.4.1 文档控制器</h4><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping("/documents")</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DocumentController</span> {</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DocumentService documentService;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> YjsDocumentService yjsDocumentService;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建文档</span></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> ApiResult&lt;String&gt; <span class="title function_">createDocument</span><span class="params">(<span class="meta">@RequestBody</span> DocumentMeta documentMeta)</span> {</span><br><span class="line">        <span class="comment">// 实现创建文档逻辑</span></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 更新文档</span></span><br><span class="line">    <span class="meta">@PutMapping("/{docId}")</span></span><br><span class="line">    <span class="keyword">public</span> ApiResult&lt;Boolean&gt; <span class="title function_">updateDocument</span><span class="params">(<span class="meta">@PathVariable</span> String docId, <span class="meta">@RequestBody</span> DocumentMeta documentMeta)</span> {</span><br><span class="line">        <span class="comment">// 实现更新文档逻辑</span></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 其他文档管理接口</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-5-缓存配置"><a href="#3-5-缓存配置" class="headerlink" title="3.5 缓存配置"></a>3.5 缓存配置</h3><p>使用Redis缓存提高系统性能：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableCaching</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedisConfig</span> {</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> RedisTemplate&lt;String, Object&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory factory)</span> {</span><br><span class="line">        <span class="comment">// Redis模板配置</span></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> CacheManager <span class="title function_">cacheManager</span><span class="params">(RedisConnectionFactory factory)</span> {</span><br><span class="line">        <span class="comment">// 缓存管理器配置</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="3-6-定时任务"><a href="#3-6-定时任务" class="headerlink" title="3.6 定时任务"></a>3.6 定时任务</h3><p>实现文档优化定时任务：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DocumentMaintenanceTask</span> {</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> YjsDocumentService yjsDocumentService;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DocumentMetaMapper documentMetaMapper;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 每天凌晨2点执行文档优化任务</span></span><br><span class="line">    <span class="meta">@Scheduled(cron = "0 0 2 * * ?")</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">optimizeDocuments</span><span class="params">()</span> {</span><br><span class="line">        <span class="comment">// 实现文档优化逻辑</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="4-关键流程实现"><a href="#4-关键流程实现" class="headerlink" title="4. 关键流程实现"></a>4. 关键流程实现</h2><h3 id="4-1-文档加载流程"><a href="#4-1-文档加载流程" class="headerlink" title="4.1 文档加载流程"></a>4.1 文档加载流程</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Client as 前端客户端</span><br><span class="line">    participant WS as WebSocket处理器</span><br><span class="line">    participant Doc as 文档服务</span><br><span class="line">    participant YDoc as Yjs文档服务</span><br><span class="line">    participant Cache as Redis缓存</span><br><span class="line">    participant MongoDB as MongoDB</span><br><span class="line">    </span><br><span class="line">    Note over Client,MongoDB: WebSocket建立连接</span><br><span class="line">    Client-&gt;&gt;WS: 建立WebSocket连接 (docId, token)</span><br><span class="line">    WS-&gt;&gt;Doc: 检查文档访问权限</span><br><span class="line">    Doc--&gt;&gt;WS: 权限验证结果</span><br><span class="line">    </span><br><span class="line">    alt 有权限访问</span><br><span class="line">        WS-&gt;&gt;YDoc: 获取文档状态 (docId)</span><br><span class="line">        YDoc-&gt;&gt;Cache: 查询缓存</span><br><span class="line">        </span><br><span class="line">        alt 缓存命中</span><br><span class="line">            Cache--&gt;&gt;YDoc: 返回文档状态</span><br><span class="line">        else 缓存未命中</span><br><span class="line">            YDoc-&gt;&gt;MongoDB: 查询文档</span><br><span class="line">            MongoDB--&gt;&gt;YDoc: 返回文档数据</span><br><span class="line">            YDoc-&gt;&gt;Cache: 缓存文档状态</span><br><span class="line">        end</span><br><span class="line">        </span><br><span class="line">        YDoc--&gt;&gt;WS: 返回文档状态</span><br><span class="line">        WS--&gt;&gt;Client: 发送初始文档状态</span><br><span class="line">        Note over Client: 应用文档状态到本地Yjs文档</span><br><span class="line">    else 无权限访问</span><br><span class="line">        WS--&gt;&gt;Client: 关闭连接（无权限）</span><br><span class="line">    end</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-2-文档更新流程"><a href="#4-2-文档更新流程" class="headerlink" title="4.2 文档更新流程"></a>4.2 文档更新流程</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Client1 as 客户端1</span><br><span class="line">    participant Client2 as 客户端2</span><br><span class="line">    participant WS as WebSocket处理器</span><br><span class="line">    participant Doc as 文档服务</span><br><span class="line">    participant YDoc as Yjs文档服务</span><br><span class="line">    participant Cache as Redis缓存</span><br><span class="line">    participant MongoDB as MongoDB</span><br><span class="line">    participant MySQL as MySQL</span><br><span class="line">    </span><br><span class="line">    Note over Client1,MySQL: 编辑文档并同步</span><br><span class="line">    Client1-&gt;&gt;WS: 发送文档更新</span><br><span class="line">    WS-&gt;&gt;Doc: 检查编辑权限</span><br><span class="line">    Doc--&gt;&gt;WS: 权限验证结果</span><br><span class="line">    </span><br><span class="line">    alt 有编辑权限</span><br><span class="line">        WS-&gt;&gt;YDoc: 存储更新</span><br><span class="line">        YDoc-&gt;&gt;MongoDB: 保存更新数据</span><br><span class="line">        YDoc-&gt;&gt;Cache: 更新缓存</span><br><span class="line">        </span><br><span class="line">        WS-&gt;&gt;Doc: 更新最后编辑信息</span><br><span class="line">        Doc-&gt;&gt;MySQL: 更新元数据</span><br><span class="line">        </span><br><span class="line">        WS-&gt;&gt;Client2: 广播更新给其他客户端</span><br><span class="line">        Note over Client2: 应用更新到本地Yjs文档</span><br><span class="line">    else 无编辑权限</span><br><span class="line">        WS--&gt;&gt;Client1: 忽略更新（无权限）</span><br><span class="line">    end</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="4-3-版本管理流程"><a href="#4-3-版本管理流程" class="headerlink" title="4.3 版本管理流程"></a>4.3 版本管理流程</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Client as 客户端</span><br><span class="line">    participant API as REST API</span><br><span class="line">    participant Doc as 文档服务</span><br><span class="line">    participant YDoc as Yjs文档服务</span><br><span class="line">    participant MySQL as MySQL</span><br><span class="line">    participant MongoDB as MongoDB</span><br><span class="line">    </span><br><span class="line">    Note over Client,MongoDB: 创建文档版本</span><br><span class="line">    Client-&gt;&gt;API: 请求创建版本</span><br><span class="line">    API-&gt;&gt;Doc: 检查编辑权限</span><br><span class="line">    Doc--&gt;&gt;API: 权限验证结果</span><br><span class="line">    </span><br><span class="line">    alt 有编辑权限</span><br><span class="line">        API-&gt;&gt;YDoc: 创建版本</span><br><span class="line">        YDoc-&gt;&gt;MongoDB: 获取当前文档状态</span><br><span class="line">        MongoDB--&gt;&gt;YDoc: 返回文档数据</span><br><span class="line">        </span><br><span class="line">        YDoc-&gt;&gt;MongoDB: 保存版本内容</span><br><span class="line">        YDoc-&gt;&gt;MySQL: 保存版本元数据</span><br><span class="line">        </span><br><span class="line">        MySQL--&gt;&gt;YDoc: 返回版本号</span><br><span class="line">        YDoc--&gt;&gt;API: 返回版本号</span><br><span class="line">        API--&gt;&gt;Client: 返回版本创建结果</span><br><span class="line">    else 无编辑权限</span><br><span class="line">        API--&gt;&gt;Client: 返回错误（无权限）</span><br><span class="line">    end</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="5-数据存储优化策略"><a href="#5-数据存储优化策略" class="headerlink" title="5. 数据存储优化策略"></a>5. 数据存储优化策略</h2><h3 id="5-1-MongoDB数据模型优化"><a href="#5-1-MongoDB数据模型优化" class="headerlink" title="5.1 MongoDB数据模型优化"></a>5.1 MongoDB数据模型优化</h3><p>MongoDB中的Yjs文档存储采用以下优化策略：</p>
+<ol>
+<li><p><strong>增量更新存储</strong>：</p>
+<ul>
+<li>将每次更新作为单独条目存储在<code>updates</code>数组中</li>
+<li>包含时间戳、用户ID和用户名等元数据</li>
+</ul>
+</li>
+<li><p><strong>状态向量存储</strong>：</p>
+<ul>
+<li>保存最新的文档状态向量，用于新客户端快速加载</li>
+</ul>
+</li>
+<li><p><strong>更新合并策略</strong>：</p>
+<ul>
+<li>当更新数量超过阈值时，进行更新合并</li>
+<li>仅保留最近的N个更新，减少存储空间占用</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">optimizeUpdates</span><span class="params">(YjsDocument document)</span> {</span><br><span class="line">    List&lt;YjsDocument.UpdateEntry&gt; updates = document.getUpdates();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (updates.size() &lt;= KEEP_RECENT_UPDATES) {</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    log.info(<span class="string">"Optimizing document: {}, updates count: {}"</span>, document.getDocId(), updates.size());</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 仅保留最近的N个更新</span></span><br><span class="line">    document.setUpdates(</span><br><span class="line">            updates.subList(updates.size() - KEEP_RECENT_UPDATES, updates.size())</span><br><span class="line">    );</span><br><span class="line">    </span><br><span class="line">    log.info(<span class="string">"After optimization, updates count: {}"</span>, document.getUpdates().size());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="5-2-缓存策略"><a href="#5-2-缓存策略" class="headerlink" title="5.2 缓存策略"></a>5.2 缓存策略</h3><p>使用Redis缓存优化文档加载性能：</p>
+<ol>
+<li><p><strong>文档状态缓存</strong>：</p>
+<ul>
+<li>缓存文档最新状态，避免频繁查询MongoDB</li>
+<li>设置合理的过期时间（如10分钟）</li>
+</ul>
+</li>
+<li><p><strong>文档元数据缓存</strong>：</p>
+<ul>
+<li>缓存文档元数据，提高权限检查性能</li>
+<li>设置较长的过期时间（如30分钟）</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Cacheable(value = "documentStates", key = "#docId")</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">byte</span>[] getDocumentState(String docId) {</span><br><span class="line">    <span class="keyword">return</span> yjsDocumentRepository.findByDocId(docId)</span><br><span class="line">            .map(doc -&gt; doc.getStateVector().getData())</span><br><span class="line">            .orElse(<span class="literal">null</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="meta">@CacheEvict(value = "documentStates", key = "#docId")</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">storeUpdate</span><span class="params">(String docId, <span class="type">byte</span>[] update, Long userId, String username)</span> {</span><br><span class="line">    <span class="comment">// 存储更新逻辑</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="5-3-定时优化任务"><a href="#5-3-定时优化任务" class="headerlink" title="5.3 定时优化任务"></a>5.3 定时优化任务</h3><p>实现定时任务对文档进行优化：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Scheduled(cron = "0 0 2 * * ?")</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">optimizeDocuments</span><span class="params">()</span> {</span><br><span class="line">    log.info(<span class="string">"Starting document optimization task"</span>);</span><br><span class="line">    </span><br><span class="line">    List&lt;DocumentMeta&gt; documents = documentMetaMapper.selectList(</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;DocumentMeta&gt;()</span><br><span class="line">                    .eq(DocumentMeta::getStatus, <span class="number">0</span>)</span><br><span class="line">    );</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 遍历文档进行优化</span></span><br><span class="line">    <span class="keyword">for</span> (DocumentMeta document : documents) {</span><br><span class="line">        <span class="keyword">try</span> {</span><br><span class="line">            yjsDocumentService.optimizeDocument(document.getDocId());</span><br><span class="line">        } <span class="keyword">catch</span> (Exception e) {</span><br><span class="line">            log.error(<span class="string">"Failed to optimize document: {}"</span>, document.getDocId(), e);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="6-部署架构"><a href="#6-部署架构" class="headerlink" title="6. 部署架构"></a>6. 部署架构</h2><p>系统可以采用以下部署架构实现高可用性和可扩展性：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    Client[客户端浏览器] &lt;--&gt;|HTTPS/WSS| LB[负载均衡器]</span><br><span class="line">    </span><br><span class="line">    subgraph "应用服务器集群"</span><br><span class="line">        App1[应用实例1]</span><br><span class="line">        App2[应用实例2]</span><br><span class="line">        App3[应用实例3]</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    LB &lt;--&gt; App1</span><br><span class="line">    LB &lt;--&gt; App2</span><br><span class="line">    LB &lt;--&gt; App3</span><br><span class="line">    </span><br><span class="line">    App1 &lt;--&gt;|分布式缓存| Redis[Redis集群]</span><br><span class="line">    App2 &lt;--&gt;|分布式缓存| Redis</span><br><span class="line">    App3 &lt;--&gt;|分布式缓存| Redis</span><br><span class="line">    </span><br><span class="line">    App1 &lt;--&gt; MySQL[(MySQL主从集群)]</span><br><span class="line">    App2 &lt;--&gt; MySQL</span><br><span class="line">    App3 &lt;--&gt; MySQL</span><br><span class="line">    </span><br><span class="line">    App1 &lt;--&gt; MongoDB[(MongoDB复制集)]</span><br><span class="line">    App2 &lt;--&gt; MongoDB</span><br><span class="line">    App3 &lt;--&gt; MongoDB</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="6-1-水平扩展支持"><a href="#6-1-水平扩展支持" class="headerlink" title="6.1 水平扩展支持"></a>6.1 水平扩展支持</h3><ol>
+<li><p><strong>无状态应用设计</strong>：</p>
+<ul>
+<li>WebSocket连接信息保存在Redis中</li>
+<li>用户会话通过Redis共享</li>
+<li>所有应用实例可以处理任何请求</li>
+</ul>
+</li>
+<li><p><strong>Redis分布式锁</strong>：</p>
+<ul>
+<li>用于处理并发操作</li>
+<li>保证数据一致性</li>
+</ul>
+</li>
+<li><p><strong>MongoDB分片</strong>：</p>
+<ul>
+<li>对大型文档集合进行分片</li>
+<li>提高数据存储和查询性能</li>
+</ul>
+</li>
+</ol>
+<h2 id="7-安全机制"><a href="#7-安全机制" class="headerlink" title="7. 安全机制"></a>7. 安全机制</h2><p>系统实现了多层次的安全机制：</p>
+<ol>
+<li><p><strong>身份验证</strong>：</p>
+<ul>
+<li>基于token的认证机制</li>
+<li>WebSocket连接需要有效token</li>
+</ul>
+</li>
+<li><p><strong>权限控制</strong>：</p>
+<ul>
+<li>文档级权限控制（读、写、管理）</li>
+<li>用户和团队权限分离</li>
+<li>权限缓存优化</li>
+</ul>
+</li>
+<li><p><strong>数据加密</strong>：</p>
+<ul>
+<li>传输加密(HTTPS/WSS)</li>
+<li>敏感数据存储加密</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-总结与展望"><a href="#8-总结与展望" class="headerlink" title="8. 总结与展望"></a>8. 总结与展望</h2><p>本系统实现了一个完整的基于Yjs+Monaco的协同编辑平台，采用MySQL+MongoDB混合存储架构，具有以下特点：</p>
+<ol>
+<li><strong>实时协作</strong>：基于WebSocket的低延迟实时数据同步</li>
+<li><strong>高效存储</strong>：混合存储架构，元数据与内容分离</li>
+<li><strong>版本管理</strong>：完整的文档版本控制功能</li>
+<li><strong>权限系统</strong>：细粒度的文档访问权限控制</li>
+<li><strong>性能优化</strong>：缓存、增量更新和定时优化机制</li>
+</ol>
+<h3 id="未来优化方向"><a href="#未来优化方向" class="headerlink" title="未来优化方向"></a>未来优化方向</h3><ol>
+<li><p><strong>WebSocket集群扩展</strong>：</p>
+<ul>
+<li>实现基于Redis的WebSocket集群，支持更大规模用户同时在线</li>
+</ul>
+</li>
+<li><p><strong>文档快照机制</strong>：</p>
+<ul>
+<li>优化大文档的历史版本存储，实现快照与增量更新结合的存储策略</li>
+</ul>
+</li>
+<li><p><strong>实时分析</strong>：</p>
+<ul>
+<li>添加用户编辑行为分析功能，提供协作洞察</li>
+</ul>
+</li>
+<li><p><strong>离线编辑支持</strong>：</p>
+<ul>
+<li>实现基于IndexedDB的本地存储机制，支持离线编辑后的自动同步</li>
+</ul>
+</li>
+</ol>
+</div></article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://img.loliapi.cn/i/pc/img456.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/f4ea304c/"><img class="prev-cover" src="/img/loading.gif" data-original="https://img.loliapi.cn/i/pc/img40.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【废弃】Yjs+Monaco 协同编辑平台架构实现文档</div></div></a></div><div class="next-post pull-right"><a href="/post/738a8ea/"><img class="next-cover" src="/img/loading.gif" data-original="https://img.loliapi.cn/i/pc/img157.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【废弃】Yjs+Monaco Java后端架构设计文档</div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="https://avatars.githubusercontent.com/u/104252444?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">Jc Zhang</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">81</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/faithererer"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">发散地收敛，终将一无所有。不应遵循本心，而应顺势而为。前路艰险，且行且至。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">10.1 团队管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E6%96%87%E6%A1%A3%E5%BD%92%E5%B1%9E%E4%B8%8E%E6%9D%83%E9%99%90"><span class="toc-number">2.</span> <span class="toc-text">10.2 文档归属与权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E5%9B%A2%E9%98%9F%E6%96%87%E6%A1%A3%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">3.</span> <span class="toc-text">10.3 团队文档工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%E5%9B%A2%E9%98%9F%E5%8A%9F%E8%83%BDAPI"><span class="toc-number">4.</span> <span class="toc-text">10.4 团队功能API</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0"><span class="toc-number"></span> <span class="toc-text">1. 系统架构概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1"><span class="toc-number"></span> <span class="toc-text">2. 数据模型设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-MySQL%E5%85%83%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">2.1 MySQL元数据模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-MongoDB%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">2.2 MongoDB文档内容模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E7%BB%84%E4%BB%B6%E8%AF%A6%E7%BB%86%E5%AE%9E%E7%8E%B0"><span class="toc-number"></span> <span class="toc-text">3. 系统组件详细实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%95%B0%E6%8D%AE%E8%AE%BF%E9%97%AE%E5%B1%82"><span class="toc-number">1.</span> <span class="toc-text">3.1 数据访问层</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-MySQL-Mapper"><span class="toc-number">1.1.</span> <span class="toc-text">3.1.1 MySQL Mapper</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-MongoDB-Repository"><span class="toc-number">1.2.</span> <span class="toc-text">3.1.2 MongoDB Repository</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9C%8D%E5%8A%A1%E5%B1%82"><span class="toc-number">2.</span> <span class="toc-text">3.2 服务层</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-YjsDocumentService"><span class="toc-number">2.1.</span> <span class="toc-text">3.2.1 YjsDocumentService</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-DocumentService"><span class="toc-number">2.2.</span> <span class="toc-text">3.2.2 DocumentService</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-TeamService"><span class="toc-number">2.3.</span> <span class="toc-text">3.2.3 TeamService</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-WebSocket%E9%80%9A%E4%BF%A1"><span class="toc-number">3.</span> <span class="toc-text">3.3 WebSocket通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-WebSocket%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.3.1 WebSocket配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-WebSocket%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">3.3.2 WebSocket处理器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-REST-API%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">3.4 REST API控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-1-%E6%96%87%E6%A1%A3%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">3.4.1 文档控制器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">3.5 缓存配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="toc-number">6.</span> <span class="toc-text">3.6 定时任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B3%E9%94%AE%E6%B5%81%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="toc-number"></span> <span class="toc-text">4. 关键流程实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%87%E6%A1%A3%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">4.1 文档加载流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%96%87%E6%A1%A3%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">4.2 文档更新流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">4.3 版本管理流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%BC%98%E5%8C%96%E7%AD%96%E7%95%A5"><span class="toc-number"></span> <span class="toc-text">5. 数据存储优化策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-MongoDB%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E4%BC%98%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">5.1 MongoDB数据模型优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">5.2 缓存策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E5%AE%9A%E6%97%B6%E4%BC%98%E5%8C%96%E4%BB%BB%E5%8A%A1"><span class="toc-number">3.</span> <span class="toc-text">5.3 定时优化任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84"><span class="toc-number"></span> <span class="toc-text">6. 部署架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E6%B0%B4%E5%B9%B3%E6%89%A9%E5%B1%95%E6%94%AF%E6%8C%81"><span class="toc-number">1.</span> <span class="toc-text">6.1 水平扩展支持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="toc-number"></span> <span class="toc-text">7. 安全机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="toc-number"></span> <span class="toc-text">8. 总结与展望</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E4%BC%98%E5%8C%96%E6%96%B9%E5%90%91"><span class="toc-number">1.</span> <span class="toc-text">未来优化方向</span></a></li></ol></li></div></div></div></div></main><footer id="footer" style="background-image: url('https://img.loliapi.cn/i/pc/img456.webp')"><div id="footer-wrap"><div class="copyright">©2020 - 2025 By Jc Zhang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'bzob4eztXzjl9OYTJtgpSQJz-gzGzoHsz',
+      appKey: '6zAsfHyCHduzc6lZCX0AYMXi',
+      avatar: 'wavatar',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/valine_f/valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="//code.tidio.co/0wz7kjtn02ewc3t9jomny2oe9buzf9gl.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer="" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer="" src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js"></script><script async="" src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end -->
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n=c[o],a=n,i=function(){c=c.filter(function(t){return n!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(n)};a.hasAttribute("bg-lazy")?(a.removeAttribute("bg-lazy"),i&&i()):(t=new Image,e=a.getAttribute("data-original"),t.onload=function(){a.src=e,a.removeAttribute("data-original"),i&&i()},a.src!==e&&(t.src=e))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":0.9,"jsonPath":"/live2dw/assets/assets/miku.model.json"},"display":{"width":250,"height":400,"position":"right","hOffset":-25,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacity":0.7},"log":false});</script>
+    <link rel="stylesheet" href="https://ai.tianli0.top/static/public/postChatUser_summary.min.css">
+    <script>
+        let tianliGPT_key = 'TNRrsBfx0i4';
+        let tianliGPT_postSelector = '#post #article-container';
+        let tianliGPT_Title = '文章摘要';
+        let tianliGPT_postURL = '/^https?://[^/]+/post/';
+        let tianliGPT_blacklist = '';
+        let tianliGPT_wordLimit = '1000';
+        let tianliGPT_typingAnimate = true;
+        var postChatConfig = {
+          backgroundColor: "#3e86f6",
+          bottom: "16px",
+          left: "16px",
+          fill: "#FFFFFF",
+          width: "44px",
+          frameWidth: "375px",
+          frameHeight: "600px",
+          defaultInput: true,
+          upLoadWeb: true,
+          showInviteLink: true,
+          userTitle: "PostChat",
+          userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～",
+          addButton: true
+        };
+        </script>
+        <script data-postchat_key="TNRrsBfx0i4" src="https://ai.tianli0.top/static/public/postChatUser_summary.min.js"></script>
+  </body></html>
