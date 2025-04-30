@@ -1,9 +1,15 @@
 ---
 title: Leetcode_705. 设计哈希集合
-tags: [算法,哈希表]
+tags:
+  - 算法
+  - 哈希表
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode, 哈希表]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 哈希表
+abbrlink: 16196
 ---
 
 

@@ -1,9 +1,14 @@
 ---
 title: Leetcode_485. 最大连续 1 的个数
-tags: [算法]
+tags:
+  - 算法
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode, 数组]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 数组
+abbrlink: 17812
 ---
 
 

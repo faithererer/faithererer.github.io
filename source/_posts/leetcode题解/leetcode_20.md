@@ -1,9 +1,14 @@
 ---
 title: leetcode_20. 有效的括号
-tags: [Leetcode,栈]
+tags:
+  - Leetcode
+  - 栈
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: [Leetcode,栈]
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories:
+  - Leetcode
+  - 栈
+abbrlink: 932
 ---
 给定一个只包括 `(`，`)`，`{`，`}`，`[`，`]` 的字符串 $s$ ，判断字符串是否有效。
 

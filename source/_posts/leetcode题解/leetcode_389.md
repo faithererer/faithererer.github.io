@@ -1,9 +1,15 @@
 ---
 title: leetcode_389. 找不同
-tags: [Leetcode,哈希表,异或]
+tags:
+  - Leetcode
+  - 哈希表
+  - 异或
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: [Leetcode,哈希表]
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories:
+  - Leetcode
+  - 哈希表
+abbrlink: 51932
 ---
 # 题目描述
 给定两个字符串 $s$ 和 $t$ ，它们只包含小写字母。

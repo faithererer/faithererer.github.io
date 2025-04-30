@@ -1,0 +1,22 @@
+{
+  "userIgnoreFilters": [
+    "live2d_models/",
+    "node_modules/",
+    "public/",
+    "themes/"
+  ],
+  "newFileLocation": "current",
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./",
+  "livePreview": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "alwaysUpdateLinks": true,
+  "strictLineBreaks": true
+}

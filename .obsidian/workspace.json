@@ -4,22 +4,65 @@
     "type": "split",
     "children": [
       {
-        "id": "2a402b73a83e1974",
+        "id": "ce4e0e4a309593e6",
         "type": "tabs",
         "children": [
           {
-            "id": "292a9ccf9b7a7dc7",
+            "id": "401484d151aa90ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/SpringBoot/使用springboot解决跨域请求.md",
+                "file": "source/_posts/毕业设计/文档/springboot3微服务整合springdoc.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "springboot3微服务整合springdoc"
+            }
+          },
+          {
+            "id": "7d8ef014b7b77a9e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.3"
+            }
+          },
+          {
+            "id": "6260929f294d181d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/VPS/未命名.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名"
+            }
+          },
+          {
+            "id": "b995f227773bea18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-03-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-03-16"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -38,8 +81,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -48,13 +94,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "square",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -62,14 +110,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 316.5
   },
   "right": {
     "id": "e19747242d3c1c19",
@@ -85,15 +135,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source/_posts/SpringBoot/使用springboot解决跨域请求.md",
+                "file": "source/_posts/java面试/G点.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "G点 的反向链接列表"
             }
           },
           {
@@ -102,10 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/SpringBoot/使用springboot解决跨域请求.md",
+                "file": "source/_posts/java面试/G点.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "G点 的出链列表"
             }
           },
           {
@@ -116,7 +170,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -125,16 +181,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/SpringBoot/使用springboot解决跨域请求.md"
-              }
+                "file": "2025-03-16.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2025-03-16 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,13 +204,69 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "292a9ccf9b7a7dc7",
+  "active": "b995f227773bea18",
   "lastOpenFiles": [
-    "source/_posts/算法/myTemplate.md",
-    "source/_posts/蓝桥杯/lanqiao.md",
-    "2024-05-19.md"
+    "source/_posts/毕业设计/挂载cd2.md",
+    "2025-03-16.md",
+    "source/_posts/VPS/未命名.md",
+    "source/_posts/经验/会话.md",
+    "source/_posts/经验/内网穿透.md",
+    "source/_posts/经验/git优雅地删除远程仓库个人最新误提交.md",
+    "source/_posts/毕业设计/文档/参考文献.md",
+    "source/_posts/毕业设计/文档/日志.md",
+    "source/_posts/java面试/RabbitMQ.md",
+    "source/_posts/java面试/String杂谈.md",
+    "source/_posts/java面试/java集合.md",
+    "source/_posts/java面试/javase.md",
+    "source/_posts/java面试/G点.md",
+    "source/_posts/java面试/hash.md",
+    "source/_posts/java面试/项目2.md",
+    "source/_posts/java面试/锁升级.md",
+    "source/_posts/java面试/面经整理.md",
+    "source/_posts/java面试/高频.md",
+    "source/_posts/经验/记一次windows的诡异的端口占用问题.md",
+    "source/_posts/经验/公网ip.md",
+    "source/_posts/经验/防止谷歌重定向.md",
+    "source/_posts/经验/搭建图床.md",
+    "source/_posts/毕业设计/时间同步设置.md",
+    "source/_posts/java/hh.md",
+    "source/_posts/java/项目的可能问的问题.md",
+    "source/_posts/java/常见限流算法.md",
+    "source/_posts/VPS",
+    "source/_posts/ppt",
+    "source/_posts/毕业设计/文档",
+    "db.json",
+    "public/css/index.css",
+    "public/img/loading.gif",
+    "public/img/loading.gif.bak",
+    "public/CNAME",
+    "public/tags/内网穿透/index.html",
+    "public/tags/经验/index.html",
+    "public/tags/实用技巧/index.html",
+    "public/img/dhgfkjhgjhefault_cover.jpg",
+    "public/live2dw/assets/assets/moc/miku.2048/texture_00.png",
+    "public/img/favicon.png",
+    "public/img/friend_404.gif",
+    "public/img/default_cover.jpg",
+    "public/img/404.jpg",
+    "画板/验证码流程.canvas",
+    "source/_posts/行测/1zxgdaug.edj 2.png",
+    "source/_posts/行测/1zxgdaug.edj 1.png",
+    "source/_posts/行测/1zxgdaug.edj.png",
+    "画板/未命名 2.canvas",
+    "画板/未命名 1.canvas",
+    "画板/未命名.canvas",
+    "Excalidraw/未命名.canvas",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "未命名 2.canvas",
+    "source/_posts/leetcode题解/未命名.canvas"
   ]
 }

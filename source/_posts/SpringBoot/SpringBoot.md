@@ -1,8 +1,15 @@
 ---
 title: SpringBoot
-tags: [SpringBoot,Vue,全栈,前端,后端,java]
+tags:
+  - SpringBoot
+  - Vue
+  - 全栈
+  - 前端
+  - 后端
+  - java
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/Z746KJUiaulVYsj.jpg
+cover: 'https://vip1.loli.io/2022/05/12/Z746KJUiaulVYsj.jpg'
+abbrlink: 33757
 date: 2023-07-11 15:54:42
 ---
 

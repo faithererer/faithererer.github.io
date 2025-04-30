@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"f3f29f37b3aa61ae","type":"text","text":"用户输入验证码，登录","x":-140,"y":280,"width":250,"height":60,"color":"1"},
+		{"id":"411336eb33110892","type":"text","text":"系统从redis验证验证码","x":-140,"y":420,"width":250,"height":60,"color":"4"},
+		{"id":"fc05f5995d96ff01","type":"text","text":"判断用户是否已经注册查数据库","x":-220,"y":577,"width":250,"height":60,"color":"4"},
+		{"id":"4b70836e1ca6dd10","type":"text","text":"返回错误信息","x":200,"y":517,"width":250,"height":60},
+		{"id":"47f55a390975080e","x":75,"y":710,"width":250,"height":60,"color":"4","type":"text","text":"新建用户记录到数据库"},
+		{"id":"6b87337c4afaa284","x":-360,"y":740,"width":250,"height":60,"color":"4","type":"text","text":"生成token，返回token，后续携带以请求头"},
+		{"id":"3f5c2a71e18ac0b5","type":"text","text":"将验证码发送到阿里云","x":200,"y":72,"width":250,"height":60,"color":"3"},
+		{"id":"3b352b3d54c3c7db","type":"text","text":"验证码保存到redis  key为phone,value为phone，设置五分钟过期时间","x":-140,"y":132,"width":250,"height":97,"color":"4"},
+		{"id":"033de32d8984eafb","type":"text","text":"接收请求，生成验证码","x":-140,"y":12,"width":250,"height":60,"color":"4"},
+		{"id":"7588403d1bafa27c","type":"text","text":"发送验证码","x":-140,"y":-100,"width":250,"height":60,"color":"1"}
+	],
+	"edges":[
+		{"id":"9bbd316f0c1400a1","fromNode":"7588403d1bafa27c","fromSide":"bottom","toNode":"033de32d8984eafb","toSide":"top"},
+		{"id":"393298575fb3b2fd","fromNode":"033de32d8984eafb","fromSide":"bottom","toNode":"3f5c2a71e18ac0b5","toSide":"top"},
+		{"id":"51d79d73ea35e6c3","fromNode":"033de32d8984eafb","fromSide":"bottom","toNode":"3b352b3d54c3c7db","toSide":"top"},
+		{"id":"0c43a5912fe90041","fromNode":"3b352b3d54c3c7db","fromSide":"bottom","toNode":"f3f29f37b3aa61ae","toSide":"top"},
+		{"id":"ff1b0e86704d9950","fromNode":"3f5c2a71e18ac0b5","fromSide":"bottom","toNode":"f3f29f37b3aa61ae","toSide":"right"},
+		{"id":"bbfd79185b1885b3","fromNode":"f3f29f37b3aa61ae","fromSide":"bottom","toNode":"411336eb33110892","toSide":"top"},
+		{"id":"e9dbd2b35b7117a2","fromNode":"411336eb33110892","fromSide":"bottom","toNode":"fc05f5995d96ff01","toSide":"top","label":"成功"},
+		{"id":"e8d0dad8693af7f5","fromNode":"411336eb33110892","fromSide":"bottom","toNode":"4b70836e1ca6dd10","toSide":"top","label":"失败"},
+		{"id":"318def393d329281","fromNode":"fc05f5995d96ff01","fromSide":"bottom","toNode":"6b87337c4afaa284","toSide":"top","label":"存在"},
+		{"id":"8967e886d51b703d","fromNode":"fc05f5995d96ff01","fromSide":"bottom","toNode":"47f55a390975080e","toSide":"top","label":"不存在"},
+		{"id":"877b8db73033e5a7","fromNode":"47f55a390975080e","fromSide":"left","toNode":"6b87337c4afaa284","toSide":"right"}
+	]
+}

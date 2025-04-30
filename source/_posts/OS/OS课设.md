@@ -1,11 +1,13 @@
 ---
 title: OS_课设
-date: 2023-06-18 00:28:12
-tags: [操作系统]
+tags:
+  - 操作系统
 mathjax: true
-cover: https://vip1.loli.io/2022/05/11/tw4ITGVMAH287jE.jpg
+cover: 'https://vip1.loli.io/2022/05/11/tw4ITGVMAH287jE.jpg'
 description: 实现模拟文件系统。
 categories: OS
+abbrlink: 8961
+date: 2023-06-18 00:28:12
 ---
 
 

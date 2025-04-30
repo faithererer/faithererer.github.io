@@ -1,9 +1,15 @@
 ---
 title: Leetcode_203. 移除链表元素
-tags: [算法,链表]
+tags:
+  - 算法
+  - 链表
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode, 链表]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 链表
+abbrlink: 2591
 ---
 
 给你一个链表的头节点 $head$ 和一个整数 $val$ ，请你删除链表中所有满足 $Node.val == val$ 的节点，并返回 **新的头节点** 。

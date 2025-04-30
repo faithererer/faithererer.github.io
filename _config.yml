@@ -13,12 +13,35 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://blog.zjcspace.xyz
+# permalink: posts/:year/:month/:day/:title.html  // 默认永久链接冗长，title中存在中文字符
+permalink: post/:abbrlink/
+# 结尾的"/"如果去掉，在我本地点开文章时会有问题，所以加了"/"
+# 还可以使用类似 post/:abbrlink.html 这种链接
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+
+ # 使用hex是因为我觉得带字母好看一点
+# Generate categories from directory-tree
+# depth: the max_depth of directory-tree you want to generate, should > 0
+auto_category:
+  enable: true  #true(default)
+  depth:        #3(default)
+  over_write: false 
+auto_title: true #enable auto title, it can auto fill the title by path
+auto_date: false #enable auto date, it can auto fill the date by time today
+force: true #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+ 
+
+
+
+
 
 # Directory
 source_dir: source
@@ -28,7 +51,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: '_posts/Scripts/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -92,7 +115,9 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - 'source/_posts/Scripts/**'
 ignore:
+  - 'source/_posts/Scripts/*/**'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -200,3 +225,43 @@ lazyload:
 # 重定向
 alias:
   chatgpt/index.html: https://sbchat.zjcspace.xyz/
+
+
+
+
+
+
+
+
+
+plugins:
+  - hexo-plugin-postchat
+
+postchat:
+  account:
+    key: "TNRrsBfx0i4" # 使用PostChat的用户请前往 https://ai.tianli0.top/ 获取 KEY，只使用文章摘要的用户前往 https://summary.zhheo.com/ 获取 KEY 。示例的Key不支持文章摘要和自定义的知识库问答，但可以使用作者的知识库对话
+  summary:
+    enableSummary: true # 开启文章摘要需要在 https://summary.zhheo.com/ 绑定你的网站
+    postSelector: "#post #article-container" # 文章选择器，用于选择文章内容。如果没有正常显示摘要，你需要访问 https://postsummary.zhheo.com/theme/custom.html#%E8%8E%B7%E5%8F%96tianligpt-postselector 学习获取，也可以联系 zhheo@qq.com 发送你的网站地址后获取
+    title: "文章摘要" # 摘要标题，用于显示在摘要顶部的自定义内容
+    summaryStyle: "https://ai.tianli0.top/static/public/postChatUser_summary.min.css" # 摘要样式css地址，如果你需要自定义摘要的css样式，可以自行修改。
+    postURL: "/^https?://[^/]+/post/"  #"/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/" # 在符合url条件的网页执行文章摘要功能，默认的配置为Hexo的默认文章路由，如果你自定义了文章的地址格式，那么需要修改。https://postchat.zhheo.com/summary.html#tianligpt-posturl
+    blacklist: "" # 填写相关的json地址，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-blacklist
+    wordLimit: "1000" # 危险操作！如果没有在文章摘要中开启url绑定，更改此变量损失已消耗过的key，因为你提交的内容发生了变化。（PostChat用户无影响，因为摘要数量是无限的）可以设置提交的字数限制，默认为1000字。，帮助文档：https://postsummary.zhheo.com/parameters.html#tianligpt-wordlimit
+    typingAnimate: true # 智能的打字效果，模拟流处理的感觉
+  chat:
+    enableAI: true # 开启PostChat智能对话，添加按钮点击对话的功能，如果你并非PostChat用户，而是仅文章摘要用户，建议关闭此功能
+    backgroundColor: "#3e86f6" # 按钮背景颜色
+    fill: "#FFFFFF" # 按钮填充颜色
+    bottom: "16px" # 按钮底部距离
+    left: "16px" # 按钮左边距离
+    width: "44px" # 按钮宽度
+    frameWidth: "375px" # 聊天界面框架宽度
+    frameHeight: "600px" # 聊天界面框架高度
+    defaultInput: true # 默认输入
+    upLoadWeb: true # 上传网站
+    showInviteLink: true # 显示邀请链接
+    userTitle: "PostChat" # 界面标题
+    userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～" # 聊天界面描述
+    addButton: true # 是否显示按钮
+

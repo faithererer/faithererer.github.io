@@ -1,9 +1,14 @@
 ---
 title: leetcode_496. 下一个更大元素 I
-tags: [Leetcode,单调栈]
+tags:
+  - Leetcode
+  - 单调栈
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: [Leetcode,栈]
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories:
+  - Leetcode
+  - 栈
+abbrlink: 14061
 ---
 $nums1$ 中数字 $x$ 的 **下一个更大元素** 是指 $x$ 在 $nums2$ 中对应位置 **右侧** 的 **第一个** 比 $x$ 大的元素。
 

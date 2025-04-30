@@ -1,10 +1,14 @@
 ---
 title: KMP
-tags: [算法,KMP]
+tags:
+  - 算法
+  - KMP
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
 categories: 算法
-date: 2023-07-09 20:31:11 
+abbrlink: 31301
+date: 2023-07-09 20:31:11
 ---
 # 关键概念:
 

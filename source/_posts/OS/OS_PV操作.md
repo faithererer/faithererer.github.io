@@ -1,10 +1,13 @@
 ---
 title: OS_PV操作
-date: 
-tags: [操作系统, PV操作]
+tags:
+  - 操作系统
+  - PV操作
 mathjax: true
-cover: https://img.btstu.cn/api/images/5dee0c4f2fca3.jpg
+cover: 'https://img.btstu.cn/api/images/5dee0c4f2fca3.jpg'
 categories: OS
+abbrlink: 10384
+date:
 ---
 
 # 什么是PV操作

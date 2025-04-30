@@ -1,9 +1,14 @@
 ---
 title: leetcode_217. 存在重复元素
-tags: [Leetcode,哈希表]
+tags:
+  - Leetcode
+  - 哈希表
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: [Leetcode,哈希表]
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories:
+  - Leetcode
+  - 哈希表
+abbrlink: 4098
 ---
 # 题目描述
 给你一个整数数组 $nums$ 。如果任一值在数组中出现 **至少两次** ，返回 $true$ ；如果数组中每个元素互不相同，返回 $false$ 。

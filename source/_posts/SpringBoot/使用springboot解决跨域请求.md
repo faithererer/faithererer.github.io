@@ -1,8 +1,11 @@
 ---
 title: 使用SpringBoot解决跨域请求
-tags: [SpringBoot,跨域问题]
+tags:
+  - SpringBoot
+  - 跨域问题
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/Z746KJUiaulVYsj.jpg
+cover: 'https://vip1.loli.io/2022/05/12/Z746KJUiaulVYsj.jpg'
+abbrlink: 5998
 date: 2023-08-07 15:01:42
 ---
 

@@ -1,10 +1,13 @@
 ---
 title: 常见算法模板
-tags: [算法]
+tags:
+  - 算法
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
 categories: 日常
-date: 2023-07-09 20:31:11 
+abbrlink: 33810
+date: 2023-07-09 20:31:11
 ---
 
 ## 快速排序

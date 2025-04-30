@@ -2,8 +2,9 @@
 title: leetcode_1_两数之和
 tags: Leetcode
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: "Leetcode"
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories: Leetcode
+abbrlink: 33805
 ---
 # 题目描述
 给定一个整数数组 $nums$ 和一个整数目标值 $target$，请你在该数组中找出  **和为目标值**  _$target$_  的那  **两个**  整数，并返回它们的数组下标。

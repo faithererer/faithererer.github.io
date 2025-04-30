@@ -1,10 +1,14 @@
 ---
 title: Leetcode_283. 移动零
-tags: [算法]
+tags:
+  - 算法
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-
-categories: [Leetcode,数组]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 数组
+abbrlink: 14321
 ---
 
 给定一个数组 $nums$，编写一个函数将所有 $0$ 移动到数组的末尾，同时保持非零元素的相对顺序。

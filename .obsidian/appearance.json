@@ -1,4 +1,10 @@
 {
   "accentColor": "",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "nativeMenus": false,
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "白板"
+  ],
+  "monospaceFontFamily": "Consolas"
 }

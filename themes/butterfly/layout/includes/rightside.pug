@@ -13,6 +13,12 @@ mixin rightsideItem(array)
         if darkmode.enable && darkmode.button
           button#darkmode(type="button" title=_p('rightside.night_mode_title'))
             i.fas.fa-adjust
+
+
+
+
+
+
       when 'hideAside'
         if aside.enable && aside.button && page.aside !== false
           button#hide-aside-btn(type="button" title=_p('rightside.aside'))

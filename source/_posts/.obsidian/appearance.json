@@ -1,0 +1,12 @@
+{
+  "accentColor": "",
+  "theme": "moonstone",
+  "nativeMenus": false,
+  "cssTheme": "Blue Topaz",
+  "enabledCssSnippets": [
+    "白板"
+  ],
+  "monospaceFontFamily": "JetBrains Mono,Consolas",
+  "textFontFamily": "微软雅黑",
+  "baseFontSize": 15
+}

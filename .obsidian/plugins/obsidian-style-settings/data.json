@@ -1,0 +1,10 @@
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-pink-topaz",
+  "blue-topaz-theme@@background-settings-workplace-background-image": false,
+  "blue-topaz-theme@@left-ribbon-style": "default-left-ribbon-style",
+  "blue-topaz-theme@@background-notebook-liked-switch": false,
+  "blue-topaz-theme@@background-image-settings-switch": false,
+  "blue-topaz-theme@@background-image-settings-markdown-page-options": "background-image-settings-markdown-page-custom",
+  "blue-topaz-theme@@toggle-bg-panel-page": false,
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-bt-default"
+}

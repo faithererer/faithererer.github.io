@@ -1,9 +1,15 @@
 ---
 title: Leetcode_933. 最近的请求次数
-tags: [算法,队列]
+tags:
+  - 算法
+  - 队列
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode, 队列]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 队列
+abbrlink: 60702
 ---
 写一个 $RecentCounter$ 类来计算特定时间范围内最近的请求。
 

@@ -1,9 +1,14 @@
 ---
 title: leetcode_206. 反转链表
-tags: [Leetcode,链表]
+tags:
+  - Leetcode
+  - 链表
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: [Leetcode,链表]
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories:
+  - Leetcode
+  - 链表
+abbrlink: 10098
 ---
 给你单链表的头节点 `head` ，请你反转链表，并返回反转后的链表。
 

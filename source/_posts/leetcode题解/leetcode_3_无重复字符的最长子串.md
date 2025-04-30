@@ -1,9 +1,12 @@
 ---
 title: leetcode_3_无重复字符的最长子串
-tags: [Leetcode,滑动窗口]
+tags:
+  - Leetcode
+  - 滑动窗口
 mathjax: true
-cover: https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg
-categories: "Leetcode"
+cover: 'https://vip1.loli.io/2022/05/12/QHnybtXcj93YLNp.jpg'
+categories: Leetcode
+abbrlink: 11029
 ---
 
 # 题目描述

@@ -1,0 +1,34 @@
+{
+	"nodes":[
+		{"id":"3d1d8d35c3cda101","type":"text","text":"线程2","x":30,"y":-340,"width":250,"height":60,"color":"2"},
+		{"id":"2442feb5ac908a9b","type":"text","text":"线程1","x":-320,"y":-340,"width":250,"height":60,"color":"2"},
+		{"id":"9d610519c7c78b70","type":"text","text":"1","x":88,"y":-137,"width":250,"height":50},
+		{"id":"ad668f481b3fdcd7","type":"text","text":"2","x":-195,"y":0,"width":250,"height":60,"color":"5"},
+		{"id":"b775aae41d9b1249","type":"text","text":"分类","x":181,"y":611,"width":250,"height":60},
+		{"id":"053a357b4721c59f","type":"text","text":"距离","x":190,"y":710,"width":250,"height":60},
+		{"id":"ef0b15b61204f15e","type":"text","text":"优惠券","x":120,"y":880,"width":250,"height":60},
+		{"id":"0fac3b0fc41117e1","type":"text","text":"评价，打分","x":-5,"y":1020,"width":250,"height":60},
+		{"id":"e1c0d23699cd2e45","type":"text","text":"商户信息","x":-155,"y":680,"width":250,"height":60,"color":"1"},
+		{"id":"f22356c48e57eec7","type":"text","text":"登录","x":-155,"y":551,"width":250,"height":60,"color":"1"},
+		{"id":"65cf1c9a21ce0d02","type":"text","text":"粉丝系统","x":-340,"y":820,"width":250,"height":60,"color":"1"},
+		{"id":"9f22f93dfedde6b0","type":"text","text":"商家引流","x":-255,"y":940,"width":250,"height":60},
+		{"id":"046c5ce68e92e57e","type":"text","text":"平台引流","x":-279,"y":1163,"width":250,"height":60},
+		{"id":"41e51e7010a14449","type":"text","text":"签到","x":-340,"y":1020,"width":250,"height":60,"color":"1"},
+		{"id":"757e4f7d7268ea82","type":"text","text":"秒杀","x":442,"y":892,"width":250,"height":60},
+		{"id":"0b6db60bec6af0c1","type":"text","text":"一人一单","x":347,"y":1022,"width":250,"height":60},
+		{"id":"5bb47b83e9805371","x":-156,"y":1697,"width":250,"height":60,"type":"text","text":"秒杀模块"}
+	],
+	"edges":[
+		{"id":"c2b6c2efde334b6f","fromNode":"2442feb5ac908a9b","fromSide":"bottom","toNode":"ad668f481b3fdcd7","toSide":"top","label":"2"},
+		{"id":"2ab441de4c42f85d","fromNode":"3d1d8d35c3cda101","fromSide":"bottom","toNode":"ad668f481b3fdcd7","toSide":"top"},
+		{"id":"0ed692569126211f","fromNode":"ad668f481b3fdcd7","fromSide":"right","toNode":"9d610519c7c78b70","toSide":"left"},
+		{"id":"f87ce9334e5f359b","fromNode":"e1c0d23699cd2e45","fromSide":"right","toNode":"b775aae41d9b1249","toSide":"left"},
+		{"id":"9133952bfbe64f85","fromNode":"e1c0d23699cd2e45","fromSide":"right","toNode":"053a357b4721c59f","toSide":"left"},
+		{"id":"d39f788e7b686b7a","fromNode":"e1c0d23699cd2e45","fromSide":"bottom","toNode":"ef0b15b61204f15e","toSide":"top"},
+		{"id":"0f94fb3fe981e576","fromNode":"e1c0d23699cd2e45","fromSide":"bottom","toNode":"0fac3b0fc41117e1","toSide":"top"},
+		{"id":"25fe2143bc01aaf6","fromNode":"65cf1c9a21ce0d02","fromSide":"bottom","toNode":"9f22f93dfedde6b0","toSide":"top"},
+		{"id":"e785438e27f9aae2","fromNode":"41e51e7010a14449","fromSide":"bottom","toNode":"046c5ce68e92e57e","toSide":"top"},
+		{"id":"677b43e59f13d0ef","fromNode":"ef0b15b61204f15e","fromSide":"right","toNode":"757e4f7d7268ea82","toSide":"left"},
+		{"id":"ea8d7bcbfff5b03d","fromNode":"ef0b15b61204f15e","fromSide":"bottom","toNode":"0b6db60bec6af0c1","toSide":"top"}
+	]
+}

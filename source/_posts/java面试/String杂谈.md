@@ -1,9 +1,12 @@
 ---
 title: 为什么String是线程安全的?
-tags: [JavaSE]
+tags:
+  - JavaSE
 mathjax: true
 cover: https://api.boxmoe.com/random.php?3
 categories: Java
+abbrlink: 5663
+published: false
 ---
 人们都说String是线程安全的，为什么呢？
 今日探究一下。

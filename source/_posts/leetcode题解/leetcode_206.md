@@ -1,9 +1,15 @@
 ---
 title: Leetcode_206. 反转链表
-tags: [算法,链表]
+tags:
+  - 算法
+  - 链表
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode, 链表]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 链表
+abbrlink: 39001
 ---
 
 

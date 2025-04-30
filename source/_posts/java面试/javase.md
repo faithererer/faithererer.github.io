@@ -1,9 +1,11 @@
 ---
 title: JavaSE
-tags: [JavaSE]
+tags:
+  - JavaSE
 mathjax: true
-cover: https://vip1.loli.io/2022/05/11/r1XRaCPvkHu7S2q.jpg
+cover: 'https://vip1.loli.io/2022/05/11/r1XRaCPvkHu7S2q.jpg'
 categories: Java
+abbrlink: 14085
 ---
 
 # 反射

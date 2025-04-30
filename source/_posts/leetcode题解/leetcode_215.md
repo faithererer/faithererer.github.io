@@ -1,9 +1,15 @@
 ---
 title: leetcode_215. 数组中的第K个最大元素
-tags: [数据结构,堆，二叉树]
+tags:
+  - 数据结构
+  - 堆，二叉树
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode,堆]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 堆
+abbrlink: 20380
 ---
 # 题目
 给定整数数组 $nums$ 和整数 $k$，请返回数组中第 $**k**$ 个最大的元素。

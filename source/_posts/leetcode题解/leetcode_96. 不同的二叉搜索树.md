@@ -1,10 +1,18 @@
-
 ---
 title: Leetcode_96. 不同的二叉搜索树
-tags: [算法,动态规划,二叉搜索树,二叉树,dp]
+tags:
+  - 算法
+  - 动态规划
+  - 二叉搜索树
+  - 二叉树
+  - dp
 mathjax: true
-cover: https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
-categories: [Leetcode,动态规划]
+cover: >-
+  https://steamuserimages-a.akamaihd.net/ugc/1709666070115424150/BC49D4781E37934E3E7AEE94662022A8FADBED19/
+categories:
+  - Leetcode
+  - 动态规划
+abbrlink: 53182
 ---
 
 

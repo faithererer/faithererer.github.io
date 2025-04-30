@@ -1,10 +1,12 @@
-
 ---
 title: leetcode_2_两数相加
-tags: [Leetcode,链表]
+tags:
+  - Leetcode
+  - 链表
 mathjax: true
-cover: https://vip1.loli.io/2022/05/11/uy7K692mcrLOXNR.jpg
-categories: "Leetcode"
+cover: 'https://vip1.loli.io/2022/05/11/uy7K692mcrLOXNR.jpg'
+categories: Leetcode
+abbrlink: 10994
 ---
 
 # 题目描述

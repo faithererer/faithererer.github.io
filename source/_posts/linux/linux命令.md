@@ -1,8 +1,10 @@
 ---
 title: Linux常用命令
-tags: [Linux]
+tags:
+  - Linux
 mathjax: true
-cover: https://vip1.loli.io/2022
+cover: 'https://vip1.loli.io/2022'
+abbrlink: 48230
 ---
 
 
