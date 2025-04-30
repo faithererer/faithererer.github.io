@@ -37,6 +37,6 @@
     "install": "^0.13.0",
     "live2d-widget-model-miku": "^1.0.5",
     "npm": "^8.15.0",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.4"
   }
 }
