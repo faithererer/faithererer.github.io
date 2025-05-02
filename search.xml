@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>限流算法</title>
+      <link href="/post/1cd72a0f/"/>
+      <url>/post/1cd72a0f/</url>
+      
+        <content type="html"><![CDATA[<div id="postchat_postcontent"><h1 id="为什么需要限流？"><a href="#为什么需要限流？" class="headerlink" title="为什么需要限流？"></a>为什么需要限流？</h1><h1 id="计数器算法-Fixed-Window-Counter"><a href="#计数器算法-Fixed-Window-Counter" class="headerlink" title="计数器算法 (Fixed Window Counter)"></a>计数器算法 (Fixed Window Counter)</h1><ul><li>window_start_time</li><li>counter</li><li>limit = rate * window_size</li><li>window_size<br>初始化：</li><li>counter=1</li><li>window_start_time = 初始时间戳<br>请求到来</li><li>根据请求到来的时间戳判断是否超过当前时间窗口<ul><li>超过：window_start_time=当前请求时间戳</li><li>未超过：counter&gt;limit<ul><li>大于：拒绝请求</li><li>小于等于：counter++ 允许请求</li></ul></li></ul></li></ul><h1 id="滑动窗口算法"><a href="#滑动窗口算法" class="headerlink" title="滑动窗口算法"></a>滑动窗口算法</h1><h2 id="基于日志-Sliding-Window-Log"><a href="#基于日志-Sliding-Window-Log" class="headerlink" title="基于日志(Sliding Window Log)"></a>基于日志(Sliding Window Log)</h2><ul><li>window_start_time</li><li><code>counters[]</code></li><li>limit = rate * window_size</li><li>window_size<br>初始化</li><li>维护一个有序列表(队列最佳)，记录请求带来的时间戳序列<br>请求到来</li><li>清除now_time-window_size之前的请求记录</li><li>当前列表数量&lt;limit?<ul><li>是：允许请求，将当前请求的时间戳加入列表</li><li>否：拒绝请求<h2 id="基于分格-Sliding-Window-Counter-More-Common"><a href="#基于分格-Sliding-Window-Counter-More-Common" class="headerlink" title="基于分格(Sliding Window Counter )- More Common"></a>基于分格(Sliding Window Counter )- More Common</h2></li></ul></li><li>limit = rate * window_size</li><li>window_size = sub_window_count * sub_window_size</li><li>sub_window_count</li><li><code>counters[sub_window_count]</code> 哈希表<now/sub_window_size, 计数><br>初始化:</li><li>counters中计数器为0<br>请求到来</li><li>计算窗口起始位置 window_start_time = now-window_size</li><li>清理起始位置之前窗口(定时),通过清理sub_window_size *  key&lt; window_start_time的元素</li><li>计算当前窗口总数： total_count = 累加counters 中的值，key值应该在(window_start_time之后)</li><li>判断是否超限：total_count&gt;=limit?<ul><li>是：拒绝请求</li><li>否：接受请求，确定计数器累加的窗口key = now/sub_window_size<ul><li>存在该key，计数器++</li><li>不存在该key，创建key，val=1<h1 id="漏桶算法-Leaky-Bucket"><a href="#漏桶算法-Leaky-Bucket" class="headerlink" title="漏桶算法 (Leaky Bucket)"></a>漏桶算法 (Leaky Bucket)</h1>状态</li></ul></li></ul></li><li>上次请求时间戳 last_time</li><li>桶容量</li><li>上次桶水量 lastwater</li><li>速率 rate<br>请求到来</li><li>获取漏水量=(now-last_time) * rate</li><li>获得桶水量 = current_water-漏水量</li><li>判断当前桶是否满<ul><li>是：拒绝</li><li>否：当前桶水量++，放行请求。last_water=当前桶水量<h1 id="令牌桶算法-Token-Bucket"><a href="#令牌桶算法-Token-Bucket" class="headerlink" title="令牌桶算法 (Token Bucket)"></a>令牌桶算法 (Token Bucket)</h1>状态</li></ul></li><li>上次令牌数量 last_token</li><li>最大token数量 max_token</li><li>速率 rate</li><li>上次请求时间 last_time<br>请求到来:</li><li>计算添加令牌 add = rate * (now-last_time)</li><li>计算当前令牌 = min(last_token+add,max_token)</li><li>判断是否存在令牌 当前令牌&gt;0<ul><li>存在：当前令牌— 允许请求</li><li>不存在：拒绝请求</li></ul></li></ul></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>给你的小内存鸡添加swap</title>
       <link href="/post/9d2f3d05/"/>
       <url>/post/9d2f3d05/</url>
