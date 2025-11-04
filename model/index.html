@@ -41,6 +41,11 @@
             border-left: 4px solid #49b1f5;
             padding-left: 15px;
         }
+        .model-info h4 {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
         .model-info p {
             color: #666;
             line-height: 1.8;
@@ -73,19 +78,22 @@
         .back-link a:hover {
             text-decoration: underline;
         }
-        @media (prefers-color-scheme: dark) {
-            .model-info {
-                background: #1a1a1a;
-            }
-            .model-info h1, .model-info h2 {
-                color: #e0e0e0;
-            }
-            .model-info p, .model-info ul, .model-info li {
-                color: #b0b0b0;
-            }
-            .feature-box {
-                background: #252525;
-            }
+        [data-theme="dark"] .model-info {
+            background: #1a1a1a;
+        }
+        [data-theme="dark"] .model-info h1, 
+        [data-theme="dark"] .model-info h2,
+        [data-theme="dark"] .model-info h3,
+        [data-theme="dark"] .model-info h4 {
+            color: #e0e0e0;
+        }
+        [data-theme="dark"] .model-info p, 
+        [data-theme="dark"] .model-info ul, 
+        [data-theme="dark"] .model-info li {
+            color: #b0b0b0;
+        }
+        [data-theme="dark"] .feature-box {
+            background: #252525;
         }
     </style>
 </head>
@@ -99,7 +107,7 @@
         </p>
         
         <div class="feature-box">
-            <h3>主要功能</h3>
+            <h4>主要功能</h4>
             <ul>
                 <li><strong>智能对话：</strong>能够理解和回应各种自然语言问题</li>
                 <li><strong>知识问答：</strong>涵盖广泛的知识领域，包括编程、技术、科学等</li>
@@ -125,7 +133,7 @@
         </p>
         
         <div class="feature-box">
-            <h3>使用建议</h3>
+            <h4>使用建议</h4>
             <ul>
                 <li>尽量清晰、具体地描述您的问题</li>
                 <li>可以进行多轮对话以获得更详细的解答</li>
